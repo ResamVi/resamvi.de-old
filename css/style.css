@@ -16,6 +16,27 @@ p {
     font-family: 'Cinzel', serif;
 }
 
+/* Dates put above titles */
+.entry-date {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: #696969;
+    margin: 0;
+    margin-top: 100px;
+}
+
+/* Titles for entries */
+.entry-title {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Actual blog entry */
+.entry-content {
+    text-align: center;
+}
+
 /* Maximum and minimum size of melon image */
 .max-height-logo {
     max-height: 315px;
@@ -37,7 +58,29 @@ p {
 /* General center the images */
 .icons {
     display:inline;
-    margin: 0 10%;
+    margin: 0 8%;
+}
+
+/* To align Image, vertical line and text */
+#header {
+    display: flex;
+    align-items: center;
+    height: 20em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#subheader {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#description {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 /* start of large tablet styles */
