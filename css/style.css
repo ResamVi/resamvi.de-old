@@ -1,0 +1,38 @@
+.container-fluid, html {
+    background-color: #fdfdfd;
+}
+
+p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+.title {
+    display: inline;
+    font-size: 4em;
+    font-weight: normal;
+    font-family: 'Cinzel', serif;
+}
+
+.max-height-logo {
+    max-height: 315px;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+/* start of large tablet styles */
+@media screen and (max-width: 991px) {
+    
+}
+
+/* start of medium tablet styles */
+@media screen and (max-width: 767px) {
+    .title {
+            font-size: 3em;
+    }
+}
+ 
+/* start of phone styles */
+@media screen and (max-width: 479px) {
+
+}
