@@ -1,3 +1,4 @@
+/* Whole HTML background color */
 .container-fluid, html {
     background-color: #fdfdfd;
 }
@@ -7,6 +8,7 @@ p {
     font-size: 1.5em;
 }
 
+/* ResamVi Text style */
 .title {
     display: inline;
     font-size: 4em;
@@ -14,10 +16,28 @@ p {
     font-family: 'Cinzel', serif;
 }
 
+/* Maximum and minimum size of melon image */
 .max-height-logo {
     max-height: 315px;
     min-height: 100px;
     min-width: 100px;
+}
+
+/* Used to center header horizontally and vertically */
+.center-row {
+    display:flex;
+    align-items:center;
+    
+    /* custom */
+    height:20em;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+/* General center the images */
+.icons {
+    display:inline;
+    margin: 0 10%;
 }
 
 /* start of large tablet styles */
@@ -34,5 +54,11 @@ p {
  
 /* start of phone styles */
 @media screen and (max-width: 479px) {
-
+    .title {
+            font-size: 2em;
+    }
+    
+    .icons {
+        margin: 0 5px;
+    }
 }
