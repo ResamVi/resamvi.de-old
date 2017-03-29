@@ -70,17 +70,34 @@ p {
     margin-right: 5%;
 }
 
+/* Text */
+#description {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Holds social media icons */
 #subheader {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
 }
 
-#description {
-    font-family: 'Cinzel', serif;
-    font-size: 1.5em;
-    text-align: center;
-    margin-bottom: 50px;
+/* To align startpage vertically */
+#startpage {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Holds the actual content */
+#startpage-container {
+    width:100vw;
+    height:50vh;
+    position:relative;
 }
 
 /* start of large tablet styles */
