@@ -16,6 +16,10 @@ p {
     font-family: 'Cinzel', serif;
 }
 
+.subtitle {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
 /* Dates put above titles */
 .entry-date {
     font-family: 'Cinzel', serif;
@@ -110,6 +114,12 @@ p {
     .title {
             font-size: 3em;
     }
+    
+    
+    #header {
+        height: 10em;
+        margin-bottom: 20px;
+    }
 }
  
 /* start of phone styles */
@@ -120,5 +130,9 @@ p {
     
     .icons {
         margin: 0 5px;
+    }
+    
+    #header {
+        height: 10em;
     }
 }
