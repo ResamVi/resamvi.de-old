@@ -1,11 +1,26 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+    text-align: center;
+    
+    background-color: #f5f2f0;
+    border-radius: 25px;
+    
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
 /* Whole HTML background color */
 .container-fluid, html {
     background-color: #fdfdfd;
-}
-
-p {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.5em;
 }
 
 /* ResamVi Text style */
@@ -14,10 +29,6 @@ p {
     font-size: 4em;
     font-weight: normal;
     font-family: 'Cinzel', serif;
-}
-
-.subtitle {
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* Dates put above titles */
@@ -39,10 +50,12 @@ p {
 /* Actual blog entry */
 .entry-content {
     text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
 }
 
 /* Maximum and minimum size of melon image */
-.max-height-logo {
+.logo {
     max-height: 315px;
     min-height: 100px;
     min-width: 100px;
@@ -59,10 +72,16 @@ p {
     margin-right:5%;
 }
 
-/* General center the images */
+/* Center the icons below header */
 .icons {
     display:inline;
     margin: 0 8%;
+}
+
+.center {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* To align Image, vertical line and text */
