@@ -31,6 +31,20 @@ ol {
     font-family: 'Cinzel', serif;
 }
 
+/* Smaller version */
+.subtitle {
+    display: inline;
+    font-size: 2em;
+    font-weight: normal;
+    font-family: 'Cinzel', serif;
+}
+
+/* For header titles of other webpages */
+.caption {
+    text-align:center;
+    margin-bottom:50px;
+}
+
 /* Dates put above titles */
 .entry-date {
     font-family: 'Cinzel', serif;
@@ -102,14 +116,19 @@ ol {
 }
 
 /* Holds social media icons */
-#subheader {
+#iconRow {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
 }
 
+/* Is inside of iconRow, wraps around the icons */
+#iconContainer {
+    text-align:center;
+}
+
 /* To align startpage vertically */
-#startpage {
+#vertical-alignment {
     min-height: 100%;
     min-height: 100vh;
     display: flex;
@@ -117,10 +136,33 @@ ol {
 }
 
 /* Holds the actual content */
-#startpage-container {
+#horizontal-alignment {
     width:100vw;
     height:50vh;
     position:relative;
+}
+
+/* The arrow down at the bottom of the initial start page */
+#arrow {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Used for the main text */
+#blog-entries {
+    margin:0 auto;
+    width:80%;
+}
+
+#footer {
+    display:inline-block;
+    margin-left:60%;
+    margin-top:100px;
+    margin-bottom:100px;
 }
 
 /* start of large tablet styles */
