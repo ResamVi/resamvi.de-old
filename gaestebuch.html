@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gästebuch</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet"  type="text/css" href="css/style.css">
+        
+        <!-- Meta Tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" /> 
+		
+        <!-- Favicon -->
+        <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+        
+        <!-- Google Captcha -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        
+    </head>
+
+    
+    <body>
+        <div class="container-fluid">    
+            
+            <!-- First Page -->
+            <div id="vertical-alignment">
+                <div id="horizontal-alignment">
+
+                    <div class="row caption">
+                        <h1 class="title">Funktioniert noch nicht</h1>
+                    </div>
+                    
+                    <div class="col-md-offset-4 col-md-4">
+
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">E-Mail</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="E-Mail (optional)">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Inhalt</label>
+                                <textarea class="form-control" rows="3" placeholder="Fühl dich frei mich in jeder Art zu kritiseren.
+Ich behalte mir jedoch vor alles Extreme zu löschen."></textarea>
+                            </div>
+                            <div class="form-group" style="text-align:center;">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1 g-recaptcha" data-sitekey="6LepQyAUAAAAAGTGHOhumDTpFEczGIuvUWUvUiDx"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4">
+                                    <button type="submit" class="btn btn-default">Bestätigen</button>
+                                </div>
+                            </div>
+                        </form>
+                    
+                    </div>
+                </div>
+            </div>    
+            
+            <div class="row" id="header">
+                
+            </div>
+        </div>
+    </body>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96453810-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</html>
