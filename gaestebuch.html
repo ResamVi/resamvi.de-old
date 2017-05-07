@@ -43,19 +43,19 @@
 
                         <form>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Name</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                                <label for="name">Name</label>
+                                <input type="name" class="form-control" id="name" placeholder="Name">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">E-Mail</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="E-Mail (optional)">
+                                <label for="email">E-Mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="E-Mail (optional)">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Inhalt</label>
-                                <textarea class="form-control" rows="3" placeholder="Fühl dich frei mich in jeder Art zu kritiseren.
+                                <label for="content">Inhalt</label>
+                                <textarea class="form-control" id="content" rows="3" placeholder="Fühl dich frei mich in jeder Art zu kritiseren.
 Ich behalte mir jedoch vor alles Extreme zu löschen."></textarea>
                             </div>
-                            <div class="form-group" style="text-align:center;">
+                            <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1 g-recaptcha" data-sitekey="6LepQyAUAAAAAGTGHOhumDTpFEczGIuvUWUvUiDx"></div>
                                 </div>
@@ -75,26 +75,26 @@ Ich behalte mir jedoch vor alles Extreme zu löschen."></textarea>
             </div>    
             
             <!-- Second Page -->
-            <div class="row" id="blog-entries" style="margin-bottom:10%;width:50%;background-color: #f5f2f0;border-radius: 25px;">
+            <div class="row" id="guestbook-entries">
                 
-                <div style="margin-left:10%;">
                 <!-- Entry -->
-                <h4 class="entry-date" style="text-align:left;margin-top:5%;">XY. ABCDEFG, 9999</h4>
-                <h2 class="entry-title" style="text-align:left;">Max Mauser</h2>
-                <div class="entry-content" style="text-align:left;margin-bottom:5%;">
-                    Hallo ich bin ein Blogeintrag
-                </div>
+                <div class="guestbook-entry">
+                    <h4 class="guestbook-date">XY. ABCDEFG, 9999</h4>
+                    <h2 class="guestbook-title">Max Mauser</h2>
+                    <div class="guestbook-content">
+                        Hallo ich bin ein Blogeintrag
+                    </div>
                 </div>
                     
                 <hr class="style">
-                
-                <div style="margin-left:10%;margin-bottom:10%;">
+                    
                 <!-- Entry -->
-                <h4 class="entry-date" style="text-align:left;margin-top:5%;">XY. ABCDEFG, 9999</h4>
-                <h2 class="entry-title" style="text-align:left;">Max Mustermann</h2>
-                <div class="entry-content" style="text-align:left;">
-                    Hallo ich nicht.
-                </div>
+                <div class="guestbook-entry">
+                    <h4 class="guestbook-date">XY. ABCDEFG, 9999</h4>
+                    <h2 class="guestbook-title">Mustermann Müller</h2>
+                    <div class="guestbook-content">
+                        Hallo ich nicht.
+                    </div>
                 </div>
                 
                 <hr class="style">

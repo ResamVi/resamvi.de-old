@@ -76,6 +76,32 @@ hr.style {
     font-size: 1.5em;
 }
 
+/* Dates put above the name */
+.guestbook-date {
+    font-family: 'Cinzel', serif;
+    color: #696969;
+    margin: 0;
+    margin-top:5%;
+}
+
+/* For the name of blog entries */
+.guestbook-title {
+    font-family: 'Cinzel', serif;
+    margin: 10px 0;
+}
+
+/* Actual guestbook entry */
+.guestbook-content {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+    margin-bottom:5%;
+}
+
+/* Wrapper for single guest book entry */
+.guestbook-entry {
+    margin-left:10%;
+}
+
 /* Maximum and minimum size of melon image */
 .logo {
     max-height: 315px;
@@ -164,6 +190,15 @@ hr.style {
 #blog-entries {
     margin:0 auto;
     width:80%;
+}
+
+/* Same as blog-entries but for guest book */
+#guestbook-entries {
+    margin:0 auto;
+    width:50%;
+    margin-bottom:10%;
+    background-color: #f5f2f0;
+    border-radius: 25px;
 }
 
 #footer {
