@@ -18,6 +18,14 @@ ol {
     padding: 0;
 }
 
+hr.style {
+    border: 0;
+    height: 1px;
+    width:80%;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
 /* Whole HTML background color */
 .container-fluid, html {
     background-color: #fdfdfd;
