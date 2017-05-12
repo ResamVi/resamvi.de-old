@@ -46,8 +46,8 @@
                     </div>
                     
                     <!-- Failure message HIDDEN -->
-                    <div id="fail" class="col-md-offset-5 col-md-2 alert" style="border">
-                        Did not verify captcha.
+                    <div id="fail" class="col-md-offset-4 col-md-4 alert" style="border">
+                        Bitte beweise, dass du ein Mensch bist.
                     </div>
                     
                     <!-- Form Page -->

@@ -1,3 +1,4 @@
+/* Used for recipe ingredients */
 ul {
     list-style-type: none;
     padding: 0;
@@ -13,17 +14,10 @@ ul {
     
 }
 
+/* Used for step by step list in recipes */
 ol {
     list-style-type: none;
     padding: 0;
-}
-
-hr.style {
-    border: 0;
-    height: 1px;
-    width:80%;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 /* Whole HTML background color */
@@ -31,7 +25,7 @@ hr.style {
     background-color: #fdfdfd;
 }
 
-/* ResamVi Text style */
+/* "ResamVi" text stylings */
 .title {
     display: inline;
     font-size: 4em;
@@ -39,7 +33,7 @@ hr.style {
     font-family: 'Cinzel', serif;
 }
 
-/* Smaller version */
+/* Smaller version of above for subtext */
 .subtitle {
     display: inline;
     font-size: 2em;
@@ -53,7 +47,7 @@ hr.style {
     margin-bottom:50px;
 }
 
-/* Dates put above titles */
+/* Dates put above titles in entries*/
 .entry-date {
     font-family: 'Cinzel', serif;
     text-align: center;
@@ -69,37 +63,11 @@ hr.style {
     margin: 10px 0;
 }
 
-/* Actual blog entry */
+/* Actual blog entry content */
 .entry-content {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.5em;
-}
-
-/* Dates put above the name */
-.guestbook-date {
-    font-family: 'Cinzel', serif;
-    color: #696969;
-    margin: 0;
-    margin-top:5%;
-}
-
-/* For the name of blog entries */
-.guestbook-title {
-    font-family: 'Cinzel', serif;
-    margin: 10px 0;
-}
-
-/* Actual guestbook entry */
-.guestbook-content {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.5em;
-    margin-bottom:5%;
-}
-
-/* Wrapper for single guest book entry */
-.guestbook-entry {
-    margin-left:10%;
 }
 
 /* Maximum and minimum size of melon image */
@@ -109,30 +77,20 @@ hr.style {
     min-width: 100px;
 }
 
-/* Used to center header horizontally and vertically */
-.center-row {
-    display:flex;
-    align-items:center;
-    
-    /* custom */
-    height:20em;
-    margin-left:5%;
-    margin-right:5%;
-}
-
 /* Center the icons below header */
 .icons {
     display:inline;
     margin: 0 8%;
 }
 
+/* Center images in entries with this */
 .center {
     display:block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* To align Image, vertical line and text */
+/* To align the melon image logo + a vertical line + text */
 #header {
     display: flex;
     align-items: center;
@@ -141,7 +99,7 @@ hr.style {
     margin-right: 5%;
 }
 
-/* Text */
+/* Text below the logo */
 #description {
     font-family: 'Cinzel', serif;
     font-size: 1.5em;
@@ -149,7 +107,7 @@ hr.style {
     margin-bottom: 50px;
 }
 
-/* Holds social media icons */
+/* Container to hold social media icons */
 #iconRow {
     width: 90%;
     margin-left: 5%;
@@ -169,7 +127,7 @@ hr.style {
     align-items: center;
 }
 
-/* Holds the actual content */
+/* Holds the actual content, for horizontal alignment */
 #horizontal-alignment {
     width:100vw;
     height:50vh;
@@ -201,6 +159,7 @@ hr.style {
     border-radius: 25px;
 }
 
+/* Navigation below the blog-entries */
 #footer {
     width:75%;
     margin-left:12.5%;
