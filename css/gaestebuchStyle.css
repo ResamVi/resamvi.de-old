@@ -1,0 +1,8 @@
+.alert {
+    background-color: #f44336;
+    color: white;
+}
+
+#fail {
+    visibility: hidden;
+}
