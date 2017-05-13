@@ -68,7 +68,7 @@ Ich behalte mir jedoch vor alles Extreme zu löschen." required></textarea>
                             </div>
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-md-10 col-md-offset-1 g-recaptcha" data-sitekey="6LepQyAUAAAAAGTGHOhumDTpFEczGIuvUWUvUiDx" data-callback="correctCaptcha"></div>
+                                    <div class="col-md-10 col-md-offset-1 g-recaptcha" data-sitekey="6LepQyAUAAAAAGTGHOhumDTpFEczGIuvUWUvUiDx"></div>
                                 </div>
                             </div>
                             <div class="row">
