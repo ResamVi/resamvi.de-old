@@ -24,32 +24,41 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         
         <script>
+            
+        var entryCount = 0;
+            
+        var load = function() {    
+            
+            console.log($(document).height() - $(window).height());
+            console.log("scrollTop(): " + $(window).scrollTop());
+            
+            // End of the document reached?
+            if ($(document).height() - $(window).height() - 20 <= $(window).scrollTop()) {
+
+                $.ajax({
+                    url: 'process/get-post.php',
+                    data: { count: entryCount },
+                    dataType: 'html',
+                    success: function(html) {
+                        $('#blog-entries').append(html);
+                    },
+                    error: function() {
+                        // Do nothing
+                    }
+                });
+                entryCount++;
+            }
+        }
+            
+        // Each time the user scrolls
         $(document).ready(function() {
-            
-            var win = $(window);
-            var entryCount = 0;
-            
-            // Each time the user scrolls
-            win.scroll(function() {
-                
-                // End of the document reached?
-                if ($(document).height() - win.height() == win.scrollTop()) {
-                    
-                    $.ajax({
-                        url: 'process/get-post.php',
-                        data: { count: entryCount },
-                        dataType: 'html',
-                        success: function(html) {
-                            $('#blog-entries').append(html);
-                        },
-                        error: function() {
-                            // Do nothing
-                        }
-                    });
-                    entryCount++;
-                }
-            });
+            $(window).scroll(load);
         });
+            
+        $('body').on({
+            'touchmove': load
+        });
+            
         </script>
     </head>
 
@@ -96,7 +105,7 @@
             </div>
             
             <!-- Last Page -->
-            <div class="entry-content">
+            <div class="entry-content" style="height:100px;">
                 &nbsp;
             </div>
         </div>
