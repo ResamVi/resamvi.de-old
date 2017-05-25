@@ -53,7 +53,7 @@ ol {
     text-align: center;
     color: #696969;
     margin: 0;
-    margin-top: 100px;
+    margin-top: 25px;
 }
 
 /* Titles for entries */
@@ -127,10 +127,25 @@ ol {
     align-items: center;
 }
 
+/* For individual blog entries, so the title is seen on first screen */
+#vertical-alignment-smaller {
+    min-height: 50%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
 /* Holds the actual content, for horizontal alignment */
 #horizontal-alignment {
     width:100vw;
     height:50vh;
+    position:relative;
+}
+
+/* Again, for individual blog entry webpages */
+#horizontal-alignment-smaller {
+    width:100vw;
+    height:25vh;
     position:relative;
 }
 
@@ -165,13 +180,31 @@ ol {
     margin-left:12.5%;
     margin-right:12.5%;
     margin-top:100px;
-    margin-bottom:100px;
+    margin-bottom:50px;
+}
+
+/* Horizontal gradient line seperating each blog entry */
+hr.gradient {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0)); 
+}
+
+/* Buttons below each entry */
+#button {
+    border: 2px solid #f5f2f0;
+    border-radius: 25px; 
+}
+
+/* ... with hover effect! */
+#button:hover {
+    border-color: #a3a3a3;
 }
 
 /* start of large tablet styles */
 @media screen and (max-width: 991px) {
     
-    #path {
+    #button {
         width: 100%;
         margin-bottom: 50px;
     }
