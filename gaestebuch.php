@@ -28,7 +28,7 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         
         <!-- Client side validation -->
-        <script src="process/validate.js"></script>
+        <script src="process/validate-form.js"></script>
         
     </head>
 
