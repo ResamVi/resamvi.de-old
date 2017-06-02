@@ -1,0 +1,48 @@
+/* Dates put above the name */
+.guestbook-date {
+    font-family: 'Cinzel', serif;
+    color: #696969;
+    margin: 0;
+    margin-top:5%;
+}
+
+/* For the name of blog entries */
+.guestbook-title {
+    font-family: 'Cinzel', serif;
+    margin: 10px 0;
+}
+
+/* Actual guestbook entry */
+.guestbook-content {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5em;
+    margin-bottom:5%;
+}
+
+/* Wrapper for single guest book entry */
+.guestbook-entry {
+    margin-left:10%;
+}
+
+/* Error message styling */
+.alert {
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+}
+
+/* Display only when error occured */
+#fail {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+/* Seperate each blog entry */
+hr.style {
+    border: 0;
+    height: 1px;
+    width:80%;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
