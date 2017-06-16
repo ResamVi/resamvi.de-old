@@ -10,7 +10,7 @@ var load = function() {
     if ($(document).height() - $(window).height() - 100 <= $(window).scrollTop()) {
 
         $.ajax({
-            url: 'process/get-post.php',
+            url: 'process/print-entry.php',
             data: { count: entryCount },
             async: false, 
             dataType: 'html',

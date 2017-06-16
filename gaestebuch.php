@@ -102,7 +102,7 @@ Ich behalte mir jedoch vor alles Extreme zu löschen." required></textarea>
                             // *************************************** SEND ************************************************
                             if(!empty($_POST)) {
 
-                                $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_guestbook");
+                                $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_data");
                                 $conn->set_charset("utf8");
 
                                 // check connection
@@ -144,7 +144,7 @@ Ich behalte mir jedoch vor alles Extreme zu löschen." required></textarea>
                 <?php
                 
                 // *************************************** CONNECT ************************************************
-                $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_guestbook");
+                $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_data");
                 $conn->set_charset("utf8");
                         
                 // check connection

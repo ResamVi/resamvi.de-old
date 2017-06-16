@@ -23,11 +23,47 @@
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         
-        <script async src="process/endless-scroll.js"></script>
+        <script async src="process/scroll-blog.js"></script>
     </head>
 
     
     <body>
+        
+        <?php
+        // ---------------------------------------------- Track user ---------------------------------------------
+        $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_data");
+        $conn->set_charset("utf8");
+
+        // check connection
+        if ($conn->connect_errno) {
+            printf("Connect failed: %s\n", $mysqli->connect_error);
+            exit();
+        }
+
+        // Get data
+        $array = get_browser(null, true);
+        $date = date("l jS \of F Y h:i:s A");
+        $ip = $_SERVER["REMOTE_ADDR"];
+        $agent = $_SERVER['HTTP_USER_AGENT'];
+        $browser = $array["browser"];
+        $language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+        $platform = $array["platform"];
+
+        $query = "INSERT INTO visits (date, ip, agent, browser, language, platform, dump) VALUES (\""
+            . $date . "\", \""
+            . $ip . "\", \""
+            . $agent . "\", \""
+            . $browser . "\", \""
+            . $language . "\", \""
+            . $platform . "\", \""
+            . implode(", ", $array)  . "\")";
+
+        $conn->query($query);
+
+        // close connection
+        $conn->close();
+        ?>
+        
         <div class="container-fluid">    
             
             <!-- First Page -->
