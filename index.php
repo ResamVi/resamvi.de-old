@@ -42,7 +42,7 @@
 
         // Get data
         $array = get_browser(null, true);
-        $date = date("l jS \of F Y h:i:s A");
+        $date = date("l jS \of F Y H:i:s A", time() + 21600);
         $ip = $_SERVER["REMOTE_ADDR"];
         $agent = $_SERVER['HTTP_USER_AGENT'];
         $browser = $array["browser"];
