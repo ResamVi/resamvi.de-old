@@ -3,7 +3,7 @@
     libxml_use_internal_errors(true);
 
     // This is the list of .html file names of entries I've done so far
-    $entries = array("charitywalkandrun2017.html","kaesekuchen.html", "screenbounce.html", "bouncingball.html","chocolatechipcookies.html", "start.html", "erster.html");
+    $entries = array("apfelkuchen.html", "charitywalkandrun2017.html","kaesekuchen.html", "screenbounce.html", "bouncingball.html","chocolatechipcookies.html", "start.html", "erster.html");
     
     // I just want a part of the entry for the main blog
     // In this object we save a html document
