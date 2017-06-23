@@ -83,6 +83,12 @@ ol {
     margin: 0 8%;
 }
 
+/* Center the icons below header */
+.subicons {
+    display: inline-block;
+    margin: 0 auto;
+}
+
 /* Center images in entries with this */
 .center {
     display:block;
@@ -117,6 +123,29 @@ ol {
 /* Is inside of iconRow, wraps around the icons */
 #iconContainer {
     text-align:center;
+}
+
+/* Contains more icons concerning my leet skills */
+#subiconContainer {
+    /*background-color: rgba(163, 163, 163, 0.22);*/
+    /*border: 1px solid #696969;
+    border-radius: 5px;*/
+    height: 70px;
+    /*visibility: hidden;*/
+}
+
+/* To evenly distribute horizontally (HACK)*/
+#vertical {
+    text-align: justify;
+    line-height: 0;
+}
+
+/* To evenly distribute horizontally (HACK)*/
+#vertical:after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 /* To align startpage vertically */
@@ -198,6 +227,25 @@ hr.gradient {
 #button:hover {
     border-color: #a3a3a3;
 }
+
+/* Animation */
+/*#icon1 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+}
+
+#icon2 {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+}
+
+#icon3 {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+}*/
 
 /* start of large tablet styles */
 @media screen and (max-width: 991px) {

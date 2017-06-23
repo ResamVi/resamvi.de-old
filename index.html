@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         
         <!-- CSS -->
-        <link rel="stylesheet"  type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
         
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -23,13 +24,14 @@
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         
-        <script async src="process/scroll-blog.js"></script>
+        <script src="process/scroll-blog.js"></script>
+        <script src="process/appear-surface.js"></script>
     </head>
 
     
     <body>
         
-        <?php
+        <!--<?php
         // ---------------------------------------------- Track user ---------------------------------------------
         $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_data");
         $conn->set_charset("utf8");
@@ -62,7 +64,7 @@
 
         // close connection
         $conn->close();
-        ?>
+        ?>-->
         
         <div class="container-fluid">    
             
@@ -85,12 +87,34 @@
                             <a href="https://github.com/ResamVi">
                                 <img src="img/icons/github48.png" alt="github" class="icons">
                             </a>
-                            <a href="http://hyunsdojo.com/user.php?u=resamvi">
-                                <img src="img/icons/dojo.jpg" alt="hyunsdojo" class="icons">
+                            <a id="trophy" style="cursor: pointer;">
+                                    <img src="img/icons/progress48.png" alt="trophy" class="icons">
                             </a>
                             <a href="https://www.youtube.com/channel/UCXUsCsOauNNuUwFLjYeyTPA">
                                 <img src="img/icons/youtube48.png" alt="youtube" class="icons">
                             </a>
+                        </div>                        
+                        
+                        <div class="col-md-4 col-md-offset-4" id="iconContainer">
+                            <img src="img/arrowDownSmall.png" alt="arrow down" id="smallarrow" style="visibility:hidden;">
+                        </div>
+                        
+                        <div class="col-md-4 col-md-offset-4" id="subiconContainer">
+                            
+                            <div id="vertical">
+                                <a href="https://www.hackerrank.com/ResamVi" style="visibility:hidden;">
+                                    <img id="icon1" src="img/icons/hackerrank48.png" alt="hackerrank" class="subicons">
+                                </a>
+                                <a href="https://www.codingame.com/profile/1d2bfec1d536931514190d98cd20a8369171221" style="visibility:hidden;">
+                                    <img id="icon2" src="img/icons/codingame48.png" alt="codingame" class="subicons">
+                                </a>
+                                <a href="http://codeforces.com/profile/ResamVi" style="visibility:hidden;">
+                                    <img id="icon3" src="img/icons/codeforces48.png" alt="codeforces" class="subicons">
+                                </a>
+                                <a href="https://www.codewars.com/users/ResamVi" style="visibility:hidden;">
+                                    <img id="icon4" src="img/icons/codewars48.png" alt="codewars" class="subicons">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
