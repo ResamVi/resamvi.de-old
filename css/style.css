@@ -127,11 +127,7 @@ ol {
 
 /* Contains more icons concerning my leet skills */
 #subiconContainer {
-    /*background-color: rgba(163, 163, 163, 0.22);*/
-    /*border: 1px solid #696969;
-    border-radius: 5px;*/
     height: 70px;
-    /*visibility: hidden;*/
 }
 
 /* To evenly distribute horizontally (HACK)*/
@@ -152,6 +148,7 @@ ol {
 #vertical-alignment {
     min-height: 95%;
     min-height: 95vh;
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -182,7 +179,7 @@ ol {
 .arrow-down {
 	  position:absolute;
 	  top:100vh;
-	  transform:translateY(-100%);
+	  transform:translateY(-200%);
 	  width:100%;
 	}
 
@@ -217,6 +214,24 @@ hr.gradient {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0)); 
 }
 
+/* Horizontal line separating first page (header) and second page (blog entries) */
+hr.separate { 
+    border-top: 1px dashed #8c8b8b; 
+    width: 80%;
+    
+} 
+hr.separate:after { 
+    content: '\2630'; 
+    display: inline-block; 
+    position: relative; 
+    top: -15px; 
+    left: 80%; 
+    padding: 0 5px; 
+    background: #f0f0f0; 
+    color: #8c8b8b; 
+    font-size: 22px; 
+}
+
 /* Buttons below each entry */
 #button {
     border: 2px solid #f5f2f0;
@@ -227,25 +242,6 @@ hr.gradient {
 #button:hover {
     border-color: #a3a3a3;
 }
-
-/* Animation */
-/*#icon1 {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -ms-animation-delay: 1s;
-}
-
-#icon2 {
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-}
-
-#icon3 {
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-}*/
 
 /* start of large tablet styles */
 @media screen and (max-width: 991px) {
