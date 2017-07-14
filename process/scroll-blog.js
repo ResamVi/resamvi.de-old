@@ -1,6 +1,6 @@
 var entryCount = 0;
 
-var load = function() {    
+function load() {    
 
     //console.log($(document).height() - $(window).height());
     //console.log("scrollTop(): " + $(window).scrollTop());
@@ -11,7 +11,12 @@ var load = function() {
 
         $.ajax({
             url: 'process/print-entry.php',
-            data: { count: entryCount },
+            data: {
+                count:          entryCount, 
+                programming:    $("#programming").prop("checked"),
+                baking:         $("#baking").prop("checked"),
+                misc:           $("#misc").prop("checked")
+            },
             async: false, 
             dataType: 'html',
             success: function(html) {

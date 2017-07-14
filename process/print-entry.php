@@ -3,15 +3,41 @@
     libxml_use_internal_errors(true);
 
     // This is the list of .html file names of entries I've done so far
-    $entries = array("apfelkuchen.html", "charitywalkandrun2017.html","kaesekuchen.html", "screenbounce.html", "bouncingball.html","chocolatechipcookies.html", "start.html", "erster.html");
-    
+    // 0 = Programming, 1 = Baking, 2 = Miscallenous
+    $entries = array(
+        "apfelkuchen.html" => 1,
+        "charitywalkandrun2017.html" => 2,
+        "kaesekuchen.html" => 1, 
+        "screenbounce.html" => 2, 
+        "bouncingball.html" => 2,
+        "chocolatechipcookies.html" => 1,
+        "start.html" => 2,
+        "erster.html" => 2);
+
+    $filter = [];
+
+    foreach ($entries as $key => $value) {
+        
+        if(strcmp($_GET["programming"], "true") == 0 && $value == 0) {
+            array_push($filter, $key);
+        }
+        
+        if(strcmp($_GET["baking"], "true") == 0 && $value == 1) {
+            array_push($filter, $key);
+        }
+        
+        if(strcmp($_GET["misc"], "true") == 0 && $value == 2) {
+            array_push($filter, $key);
+        }
+    }
+
     // I just want a part of the entry for the main blog
     // In this object we save a html document
     $doc = new DOMDocument();
     
     // Load document (if there are any to load)
-    if(intval($_GET["count"]) < count($entries)) {
-        $doc->loadHTML(file_get_contents("../" . $entries[$_GET["count"]]));
+    if(intval($_GET["count"]) < count($filter)) {
+        $doc->loadHTML(file_get_contents("../" . $filter[$_GET["count"]]));
     }else{
          header("HTTP/1.1 404 Not Found");
     }
