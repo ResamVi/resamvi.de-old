@@ -31,6 +31,18 @@
         }
     }
 
+    if(strcmp($_GET["search"], "") != 0) {
+        
+        $filter = array();
+        
+        foreach($entries as $key => $value) {
+            if (strpos($key, $_GET["search"]) !== false) {
+                array_push($filter, $key);
+            }
+        }
+        
+    }
+
     // I just want a part of the entry for the main blog
     // In this object we save a html document
     $doc = new DOMDocument();

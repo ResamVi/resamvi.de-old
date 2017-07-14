@@ -1,4 +1,5 @@
 var entryCount = 0;
+var searchTerm = "";
 
 function load() {    
 
@@ -8,11 +9,12 @@ function load() {
     
     // End of the document reached?
     if ($(document).height() - $(window).height() - 100 <= $(window).scrollTop()) {
-
+        
         $.ajax({
             url: 'process/print-entry.php',
             data: {
-                count:          entryCount, 
+                count:          entryCount,
+                search:         $('#searchBox').val(),
                 programming:    $("#programming").prop("checked"),
                 baking:         $("#baking").prop("checked"),
                 misc:           $("#misc").prop("checked")

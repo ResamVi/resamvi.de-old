@@ -28,14 +28,15 @@
         <script src="process/appear-surface.js"></script>
         <script src="process/show-search.js"></script>
         <script src="process/filter-blog.js"></script>
+        <script src="process/search-entry.js"></script>
     </head>
 
     
     <body>
         
-        <!--<?php
+        <?php
         // ---------------------------------------------- Track user ---------------------------------------------
-        $conn = new mysqli("localhost", "root", "password", "resatult_data");
+        $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_data");
         $conn->set_charset("utf8");
 
         // check connection
@@ -66,7 +67,7 @@
 
         // close connection
         $conn->close();
-        ?>-->
+        ?>
         
         <div class="container-fluid" style="padding:0;">    
             
@@ -132,7 +133,7 @@
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <div class="input-group">
                         <span class="input-group-addon">&#128270;</span>
-                        <input type="text" class="form-control" placeholder="Suche">
+                        <input type="text" class="form-control" placeholder="Suche" id="searchBox">
                     </div>
                     <div style="margin-top:5px;">
                         <div class="checkbox-inline">
