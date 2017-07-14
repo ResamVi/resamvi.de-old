@@ -230,16 +230,21 @@ hr.separate {
     width: 80%;
     
 } 
-hr.separate:after { 
-    content: '\2630'; 
+
+.sandwich { 
     display: inline-block; 
     position: relative; 
     top: -15px; 
-    left: 80%; 
+    left: 65%; 
     padding: 0 5px; 
     background: #f0f0f0; 
     color: #8c8b8b; 
     font-size: 22px; 
+    cursor: pointer;
+}
+
+.search {
+    visibility: hidden;
 }
 
 /* Buttons below each entry */
