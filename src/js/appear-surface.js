@@ -16,8 +16,9 @@ $(document).ready(function() {
             // Animate
             $("#smallarrow").addClass("animated fadeInDown");
             
-            for(var i = 1; i <= 4; i++)
-                setTimeout(function(id) {fadeInId(id)}, i * 150, i);
+            for(var i = 1; i <= 4; i++) {
+                setTimeout(function(id) {fadeInId(id);}, i * 150, i);
+            }
             
             isHidden = false;
         } else {
@@ -31,12 +32,12 @@ $(document).ready(function() {
             fadeOutEach();
             
             // When animation ends set to invisible
-            setTimeout(function() {setInvisible()}, 700);
+            setTimeout(function() {setInvisible();}, 700);
             
             isHidden = true;
         }
         
-    })
+    });
     
     function fadeInId(id) {
         $("#icon" + id).css("visibility", "visible");

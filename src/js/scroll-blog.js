@@ -10,8 +10,10 @@ function load() {
     // End of the document reached?
     if ($(document).height() - $(window).height() - 100 <= $(window).scrollTop()) {
         
+        console.log("JS läuft");
+        
         $.ajax({
-            url: 'process/print-entry.php',
+            url: 'php/print-entry.php',
             data: {
                 count:          entryCount,
                 search:         $('#searchBox').val(),

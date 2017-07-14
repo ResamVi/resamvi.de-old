@@ -24,11 +24,11 @@
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         
-        <script src="process/scroll-blog.js"></script>
-        <script src="process/appear-surface.js"></script>
-        <script src="process/show-search.js"></script>
-        <script src="process/filter-blog.js"></script>
-        <script src="process/search-entry.js"></script>
+        <script src="js/scroll-blog.js"></script>
+        <script src="js/appear-surface.js"></script>
+        <script src="js/show-search.js"></script>
+        <script src="js/filter-blog.js"></script>
+        <script src="js/search-entry.js"></script>
     </head>
 
     

@@ -28,7 +28,7 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         
         <!-- Client side validation -->
-        <script src="process/validate-form.js"></script>
+        <script src="js/validate-form.js"></script>
         
     </head>
 
@@ -72,7 +72,7 @@
                         
                         <?php
                         
-                        require 'process/phpmailer/PHPMailerAutoload.php';
+                        require 'php/PHPMailerAutoload.php';
                         
                         
                         // Used to combat evil user inputs
