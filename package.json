@@ -1,4 +1,33 @@
 {
-  "name": "resamvi",
-  "version": "1.0"
+  "name": "resamvi.de",
+  "version": "1.0.0",
+  "description": "Julien's blog on programming, baking, editing, animation and miscallenous",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ResamVi/resamvi.de.git"
+  },
+  "keywords": [
+    "website",
+    "resamvi",
+    "blog"
+  ],
+  "author": "Julien Midedji",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ResamVi/resamvi.de/issues"
+  },
+  "homepage": "https://github.com/ResamVi/resamvi.de#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "jshint-stylish": "^2.2.1"
+  }
 }
