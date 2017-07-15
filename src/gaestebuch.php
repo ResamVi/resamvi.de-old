@@ -102,7 +102,7 @@ Ich behalte mir jedoch vor alles Extreme zu löschen." required></textarea>
                             // *************************************** SEND ************************************************
                             if(!empty($_POST)) {
 
-                                $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_data");
+                                $conn = new mysqli("localhost", "root", "password", "resatult_data");
                                 $conn->set_charset("utf8");
 
                                 // check connection
