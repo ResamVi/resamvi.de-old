@@ -46,22 +46,16 @@
         }
 
         // Get data
-        $array = get_browser(null, true);
         $date = date("l jS \of F Y H:i:s A", time() + 21600);
         $ip = $_SERVER["REMOTE_ADDR"];
         $agent = $_SERVER['HTTP_USER_AGENT'];
-        $browser = $array["browser"];
         $language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-        $platform = $array["platform"];
 
-        $query = "INSERT INTO visits (date, ip, agent, browser, language, platform, dump) VALUES (\""
+        $query = "INSERT INTO visits (date, ip, agent, language) VALUES (\""
             . $date . "\", \""
             . $ip . "\", \""
             . $agent . "\", \""
-            . $browser . "\", \""
-            . $language . "\", \""
-            . $platform . "\", \""
-            . implode(", ", $array)  . "\")";
+            . $language . "\")";
 
         $conn->query($query);
 
