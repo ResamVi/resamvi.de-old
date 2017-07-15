@@ -10,7 +10,14 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-string-replace'); 
     grunt.loadNpmTasks('grunt-contrib-cssmin'); 
     grunt.loadNpmTasks('grunt-contrib-watch'); 
+    grunt.loadNpmTasks('grunt-contrib-less');
      
+    // TODO: Less support
+    // TODO: change xampp passw to server passw
+    // TODO: Use bower
+    // TODO: Use html5 tags
+    // TODO: Change PHP date format  
+  
     grunt.initConfig(   {  
       // ============== DEVELOPMENT ============== 
         // Update files 
@@ -141,7 +148,7 @@ module.exports = function(grunt){
 
             },
             files:{  
-               'build/css/style.css':'src/css/main.less'
+               'build/css/styless.css':'src/css/main.less'
             }
          }
       },
@@ -149,7 +156,7 @@ module.exports = function(grunt){
         'string-replace':{
          build:{  
             files:{  
-               'build/':'build/**.html',
+               'build/':'build/**.php',
 
             },
             options:{  
@@ -194,6 +201,16 @@ module.exports = function(grunt){
                }
             ]
          },
+         target3:{  
+            files:[  
+               {  
+                  expand:true,
+                  cwd:'src/php',
+                  src:'**',
+                  dest:'build/php'
+               }
+            ]
+         },
          source:{  
             files:[  
                {  
@@ -226,13 +243,27 @@ module.exports = function(grunt){
             src:'build/',
             dest:'/home/resatult/public_html',
             serverSep:'/',
-            localSep:'/',
+            localSep:'\\',
             concurrency:4,
             progress:true
          }
       }
    }   ); 
-     
+    
+    grunt.registerTask('compile', 'less');
+    
+    grunt.registerTask('debug',
+   [  
+      'copy:target1',
+      'copy:target2',
+      'copy:target3',
+      'htmlmin',
+      'concat',
+      'uglify',
+      'cssmin',
+      'copy:build',
+      'build'
+   ]   ); 
     grunt.registerTask('check',
    [  
       'htmllint',
@@ -243,6 +274,7 @@ module.exports = function(grunt){
    [  
       'copy:target1',
       'copy:target2',
+      'copy:target3',
       'htmlmin',
       'jshint',
       'concat',
