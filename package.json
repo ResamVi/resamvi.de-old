@@ -1,7 +1,7 @@
 {
   "name": "resamvi.de",
   "version": "1.0.0",
-  "description": "Julien's blog on programming, baking, editing, animation and miscallenous",
+  "description": "a website including the shit julien does",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,29 +12,33 @@
   },
   "keywords": [
     "website",
-    "resamvi",
     "blog"
   ],
   "author": "Julien Midedji",
-  "license": "BSD-2-Clause",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ResamVi/resamvi.de/issues"
   },
   "homepage": "https://github.com/ResamVi/resamvi.de#readme",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^2.2.0",
-    "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-less": "^1.4.1",
-    "grunt-contrib-uglify": "^3.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-html": "^8.5.0",
-    "grunt-pagespeed": "^2.0.1",
-    "grunt-sftp-deploy": "^0.2.5",
-    "grunt-string-replace": "^1.3.1",
-    "jshint-stylish": "^2.2.1"
+    "@aquafadas/gulp-php-minify": "^0.3.1",
+    "@cedx/gulp-php-minify": "^4.0.0",
+    "del": "^3.0.0",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-sftp": "^0.1.5",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "lazypipe": "^1.0.1",
+    "pump": "^1.0.2",
+    "run-sequence": "^2.0.0"
   }
 }
