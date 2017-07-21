@@ -19,6 +19,7 @@ const PHP_FILES = 'src/php/**';
 
 const BUILD_DIR = 'build/';
 const SRC_DIR = 'src/';
+const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
 const SCRIPT_DECLARATION = '<script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script>';
 
@@ -69,27 +70,52 @@ gulp.task('copy', function() {
   return;
 });
 
-gulp.task('clear', function() {
-  return gulp.src(['C:\\xampp\\htdocs\\**\\*.*', '!C:\\xampp\\htdocs'])
+gulp.task('clear:xamp', function() {
+  return gulp.src([XAMP_DIR + '**\\*.*', '!' + XAMP_DIR])
     .pipe(clean({force:true}));
 });
 
-gulp.task('debug:build', ['clear'], function() {
+gulp.task('clear:local', function() {
+  return gulp.src([SRC_DIR + '**/*.*'])
+    .pipe(clean({force:true}));
+});
+
+gulp.task('debug:save', ['clear:local'], function() {
+  gulp.src([XAMP_DIR + 'index.php', XAMP_DIR + 'tutorium.php', XAMP_DIR + 'gaestebuch.php'])
+	.pipe(extension('.html'))
+    .pipe(replace('<?php', '<!--<?php'))
+    .pipe(replace('?>', '?>-->'))
+    .pipe(gulp.dest(SRC_DIR));
+  
+  gulp.src([XAMP_DIR + '**', '!' + XAMP_DIR + 'index.php', '!' + XAMP_DIR + 'tutorium.php', '!' + XAMP_DIR + 'gaestebuch.php'])
+	.pipe(gulp.dest(SRC_DIR));
+	
+});
+
+gulp.task('debug:build', ['clear:xamp'], function() {
   sequence('minify', 'combine', 'copy');
   
   gulp.src(BUILD_DIR + '**')
-    .pipe(gulp.dest('C:\\xampp\\htdocs'));
+    .pipe(gulp.dest(XAMP_DIR));
   
   return;
 });
 
-gulp.task('debug:src', ['clear'], function() {
-  gulp.src(SRC_DIR + '**')
+gulp.task('debug:src', ['clear:xamp'], function() {
+  gulp.src(['src/index.html', 'src/tutorium.html', 'src/gaestebuch.html'])
+	.pipe(extension('.php'))
+    .pipe(replace('<!--<?php', '<?php'))
+    .pipe(replace('?>-->', '?>'))
     .pipe(gulp.dest('C:\\xampp\\htdocs'));
+  
+  gulp.src([SRC_DIR + '**', '!src/index.html', '!src/tutorium.html', '!src/gaestebuch.html'])
+	.pipe(gulp.dest(XAMP_DIR));
+  
+  return;
 });
 
 gulp.task('deploy', function () {
-  gulp.src('build/**')
+  gulp.src(BUILD_DIR + '**')
     .pipe(sftp({
         host: 'server102.web-hosting.com',
         port: 21098,

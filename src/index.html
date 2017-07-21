@@ -29,12 +29,13 @@
         <script src="js/show-search.js"></script>
         <script src="js/filter-blog.js"></script>
         <script src="js/search-entry.js"></script>
+        <script src="js/button-check.js"></script>
     </head>
 
     
     <body>
         
-        <?php
+        <!--<?php
         // ---------------------------------------------- Track user ---------------------------------------------
         $conn = new mysqli("localhost", "root", "password", "resatult_data");
         $conn->set_charset("utf8");
@@ -61,7 +62,7 @@
 
         // close connection
         $conn->close();
-        ?>
+        ?>-->
         
         <div class="container-fluid" style="padding:0;">    
             
@@ -118,39 +119,35 @@
 				</div>
             
             </div>
+            
             <hr class="separate" style="padding:0px;margin:auto;">
+            <div class="sandwich"><span class="glyphicon glyphicon-menu-hamburger" style="color: #414141;"></span></div>
             
-            <div class="sandwich">&#9776;</div>
-            
-            
-            <form class="form center-block search">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <div class="input-group">
-                        <span class="input-group-addon">&#128270;</span>
-                        <input type="text" class="form-control" placeholder="Suche" id="searchBox">
-                    </div>
-                    <div style="margin-top:5px;">
-                        <div class="checkbox-inline">
-                          <label style="font-weight: normal">
-                            <input type="checkbox" id="programming" checked>
-                            Programmierung
-                          </label>
-                        </div>
-                        <div class="checkbox-inline">
-                          <label style="font-weight: normal">
-                            <input type="checkbox" id="baking" checked>
-                            Backen
-                          </label>
-                        </div>
-                        <div class="checkbox-inline">
-                          <label style="font-weight: normal">
-                            <input type="checkbox" id="misc" checked>
-                            Sonstiges
-                          </label>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            <div class="row">
+              <form class="form center-block search">
+                  <div class="col-md-4 col-md-offset-4 text-center">
+                      <div class="input-group">
+                          <span class="input-group-addon">&#128270;</span>
+                          <input type="text" class="form-control" placeholder="Suche" id="searchBox">
+                      </div>
+
+                      <div style="margin-top:5px;">
+                        <span class="button-checkbox">
+                            <button type="button" class="btn" data-color="default">Programmieren</button>
+                            <input type="checkbox" class="hidden" id="programming" checked />
+                        </span>
+                        <span class="button-checkbox">
+                            <button type="button" class="btn" data-color="default">Backen</button>
+                            <input type="checkbox" class="hidden" id="baking" checked/>
+                        </span>
+                        <span class="button-checkbox">
+                            <button type="button" class="btn" data-color="default">Sonstiges</button>
+                            <input type="checkbox" class="hidden" checked id="misc" />
+                        </span>
+                      </div>
+                  </div>
+              </form>
+              </div>
             
             
             <!--
