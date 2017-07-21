@@ -238,15 +238,22 @@ hr.separate {
 } 
 
 .sandwich { 
-    display: inline-block; 
-    position: relative; 
-    top: -15px; 
+    
+    position: relative;
+    top:-15px;
     left: 65%; 
-    padding: 0 5px; 
     background: #f0f0f0; 
-    color: #8c8b8b; 
-    font-size: 22px; 
+    width:30px;
+    height:30px;
     cursor: pointer;
+    
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.glyphicon-menu-hamburger {
+  font-size: 1.5em;
 }
 
 .search {
