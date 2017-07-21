@@ -1,6 +1,10 @@
+* {
+  color: #333333;
+}
+
 /* Used for centering */
 h2, h3, h4 {
-  text-align: center;
+  text-align: left;
 }
 
 .centered {
@@ -10,24 +14,26 @@ h2, h3, h4 {
 /* Used for recipe ingredients */
 ul {
     list-style-type: none;
-    padding: 0;
+    /*padding: 0;*/
     
-    text-align: center;
+    text-align: left;
     
     background-color: #f5f2f0;
     border-radius: 25px;
     
-    width:80%;
+    /*width:80%;
     margin-left:auto;
-    margin-right:auto;
+    margin-right:auto;*/
     
 }
 
 /* Used for step by step list in recipes */
 ol {
-    list-style-type: none;
-    padding: 0;
+    padding-left: 10px;
+    list-style-position: inside;
 }
+
+
 
 /* Whole HTML background color */
 .container-fluid, html {
@@ -59,7 +65,7 @@ ol {
 /* Dates put above titles in entries*/
 .entry-date {
     font-family: 'Cinzel', serif;
-    text-align: center;
+    text-align: left;
     color: #696969;
     margin: 0;
     margin-top: 25px;
@@ -68,8 +74,9 @@ ol {
 /* Titles for entries */
 .entry-title {
     font-family: 'Cinzel', serif;
-    text-align: center;
+    text-align: left;
     margin: 10px 0;
+    border-bottom: 1px solid #333333;
 }
 
 /* Actual blog entry content */
