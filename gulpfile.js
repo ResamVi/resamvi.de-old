@@ -29,6 +29,7 @@ gulp.task('default', function () {
 
 gulp.task('minify', function () {
   gulp.src([HTML_FILES, '!src/index.html', '!src/tutorium.html', '!src/gaestebuch.html'])
+    .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
@@ -42,8 +43,9 @@ gulp.task('minify', function () {
       removeComments: true
     }))
     .pipe(replace(SCRIPT_DECLARATION, '<script src="js/script.js"></script>'))
-    .pipe(replace('"root", "password"', key()))
+    .pipe(replace('<script src="js/validate-form.js"></script>', '<script src="js/script.js"></script>'))
     .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
+    .pipe(replace('"root", "password"', key()))
     .pipe(gulp.dest(BUILD_DIR));
 
   return;
