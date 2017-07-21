@@ -38,6 +38,8 @@ gulp.task('minify', function () {
 
   gulp.src(HTML_PHP_FILES)
     .pipe(extension('.php'))
+    .pipe(replace('<!--<?php', '<?php'))
+    .pipe(replace('?>-->', '?>'))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
