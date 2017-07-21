@@ -2,6 +2,17 @@
   color: #333333;
 }
 
+.start {
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  align-items: center;
+}
+
+.jumbotron {
+  background-color: white !important;
+}
+
 /* Used for centering */
 h2, h3, h4 {
   text-align: left;
