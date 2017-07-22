@@ -20,6 +20,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="js/activate-tooltip.js"></script>
 </head>
 
 
@@ -34,15 +37,11 @@
     </div>
   </section>
 
-  <div class="container-fluid">
-    <!-- Second Page -->
+  <section class="container-fluid">
     <div class="row" id="blog-entries">
-
-      <!-- Entry -->
       <h4 class="entry-date">3. Mai, 2017</h4>
       <h2 class="entry-title">Käsekuchen (&Oslash; 20cm)</h2>
       <div class="entry-content">
-
         <h2>Zutaten</h2>
         <ul>
           <li>350g Magerquark</li>
@@ -75,31 +74,24 @@
           <li>Abkühlen lassen.</li>
         </ol>
 
-        <h2 class="centered">Ergebnis</h2>
-        <img src="img/entry/kaesekuchen/kaesekuchen.jpg" alt="kaesekuchen" class="img-responsive center">
-
-
+        <h2>Ergebnis</h2>
+        <img src="img/entry/kaesekuchen/kaesekuchen.jpg" alt="kaesekuchen" class="img-responsive">
       </div>
-
     </div>
 
-    <!-- Last Page -->
     <div class="row" id="footer">
-
       <a href="gaestebuch.php">
-        <div class="col-md-3 text-center" id="button">
+        <div class="col-md-3 text-center" id="button" data-toggle="tooltip" data-placement="top" title="Zum Gästebuch">
           <img src="img/book.jpg" alt="door">
         </div>
       </a>
-
-      <a href="impressum.html">
-        <div class="col-md-3 col-md-offset-6 text-center" id="button">
+      <a href="index.php">
+        <div class="col-md-3 col-md-offset-6 text-center" id="button" data-toggle="tooltip" data-placement="top" title="Zurück zur Homepage">
           <img src="img/door.jpg" alt="door">
         </div>
       </a>
-
     </div>
-  </div>
+  </section>
 </body>
 
 </html>

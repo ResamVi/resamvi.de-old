@@ -20,7 +20,9 @@
     "url": "https://github.com/ResamVi/resamvi.de/issues"
   },
   "homepage": "https://github.com/ResamVi/resamvi.de#readme",
-  "dependencies": {},
+  "dependencies": {
+    "less-plugin-autoprefix": "^1.5.1"
+  },
   "devDependencies": {
     "@aquafadas/gulp-php-minify": "^0.3.1",
     "@cedx/gulp-php-minify": "^4.0.0",
@@ -33,10 +35,12 @@
     "gulp-ext-replace": "^0.3.0",
     "gulp-filter": "^5.0.0",
     "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.2",
     "gulp-replace": "^0.6.1",
     "gulp-sftp": "^0.1.5",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "gulp-watch-less": "^1.0.1",
     "lazypipe": "^1.0.1",
     "pump": "^1.0.2",
     "run-sequence": "^2.0.0"

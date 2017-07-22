@@ -1,16 +1,9 @@
-/* Dates put above the name */
-
-.guestbook-date {
-  font-family: 'Cinzel', serif;
-  color: #696969;
-  margin: 0;
-  margin-top: 5%;
-}
-
+@import "style.less";
 
 /* For the name of blog entries */
+
 .guestbook-title {
-  font-family: 'Cinzel', serif;
+  .cursive-font;
   margin: 10px 0;
 }
 
@@ -18,8 +11,7 @@
 /* Actual guestbook entry */
 
 .guestbook-content {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 1.5em;
+  .entry-content;
   margin-bottom: 5%;
 }
 
@@ -34,18 +26,18 @@
 /* Error message styling */
 
 .alert {
-  background-color: #f44336;
   color: white;
   text-align: center;
+  background-color: #f44336;
 }
 
 
 /* Display only when error occured */
 
 #fail {
+  top: 0;
   display: none;
   position: absolute;
-  top: 0;
 }
 
 

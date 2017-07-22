@@ -9,6 +9,13 @@ var sequence = require('run-sequence');
 var sftp = require('gulp-sftp');
 var clean = require('gulp-clean');
 var key = require('key');
+var watchLess = require('gulp-watch-less');
+var less = require('gulp-less');
+var LessAutoprefix = require('less-plugin-autoprefix');
+var autoprefix = new LessAutoprefix({
+  browsers: ['last 2 versions']
+});
+
 
 const HTML_FILES = 'src/*.html';
 const HTML_PHP_FILES = ['src/index.html', 'src/tutorium.html', 'src/gaestebuch.html'];
@@ -21,15 +28,18 @@ const BUILD_DIR = 'build/';
 const SRC_DIR = 'src/';
 const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
-const SCRIPT_DECLARATION = '<script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script>';
+const SCRIPT_DECLARATION = '<script src="js/activate-tooltip.js"></script><script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script>';
+const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
 
+// Stage src to server
 gulp.task('default', function () {
   sequence('minify', 'combine', 'copy', 'deploy');
 });
 
+// Replace all keys/imports used as dev and minify
 gulp.task('minify', function () {
   gulp.src([HTML_FILES, '!src/index.html', '!src/tutorium.html', '!src/gaestebuch.html'])
-    .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
+    .pipe(replace('<script src="js/activate-tooltip.js"></script>', DEFAULT_SCRIPT))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
@@ -44,15 +54,32 @@ gulp.task('minify', function () {
       collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(replace(SCRIPT_DECLARATION, '<script src="js/script.js"></script>'))
-    .pipe(replace('<script src="js/validate-form.js"></script>', '<script src="js/script.js"></script>'))
+    .pipe(replace(SCRIPT_DECLARATION, DEFAULT_SCRIPT))
+    .pipe(replace('<script src="js/validate-form.js"></script>', DEFAULT_SCRIPT))
     .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
+    .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
+    .pipe(replace('<link rel="stylesheet" type="text/css" href="css/gaestebuch.css">', ''))
     .pipe(replace('"root", "password"', key()))
     .pipe(gulp.dest(BUILD_DIR));
 
   return;
 });
 
+// Compile less files
+gulp.task('update', function () {
+  return gulp.src('src/css/*.less')
+    .pipe(less({
+      plugins: [autoprefix]
+    }))
+    .pipe(gulp.dest('src/css/'))
+});
+
+// Update style css while developing
+gulp.task('less', function () {
+  gulp.watch('src/css/*.less', ['update']);
+});
+
+// Concatenate scripts and styles
 gulp.task('combine', function () {
   gulp.src(JS_FILES)
     .pipe(concat('script.js'))
@@ -67,6 +94,7 @@ gulp.task('combine', function () {
   return;
 });
 
+// Copy images htaccess and php libs
 gulp.task('copy', function () {
   gulp.src(IMG_FILES)
     .pipe(gulp.dest(BUILD_DIR + 'img/'));
@@ -80,6 +108,7 @@ gulp.task('copy', function () {
   return;
 });
 
+// Clear htdocs to add new files
 gulp.task('clear:xamp', function () {
   return gulp.src([XAMP_DIR + '**\\*.*', '!' + XAMP_DIR])
     .pipe(clean({
@@ -87,6 +116,7 @@ gulp.task('clear:xamp', function () {
     }));
 });
 
+// Clear src folder to add new files
 gulp.task('clear:local', function () {
   return gulp.src([SRC_DIR + '**/*.*'])
     .pipe(clean({
@@ -94,6 +124,7 @@ gulp.task('clear:local', function () {
     }));
 });
 
+// Save the changes from htdocs to src
 gulp.task('debug:save', ['clear:local'], function () {
   gulp.src([XAMP_DIR + 'index.php', XAMP_DIR + 'tutorium.php', XAMP_DIR + 'gaestebuch.php'])
     .pipe(extension('.html'))
@@ -106,6 +137,7 @@ gulp.task('debug:save', ['clear:local'], function () {
 
 });
 
+// Copies the build folder to htdocs
 gulp.task('debug:build', ['clear:xamp'], function () {
   sequence('minify', 'combine', 'copy');
 
@@ -115,6 +147,7 @@ gulp.task('debug:build', ['clear:xamp'], function () {
   return;
 });
 
+// Copies the src folder to htdocs (replaces php comments to make it work)
 gulp.task('debug:src', ['clear:xamp'], function () {
   gulp.src(['src/index.html', 'src/tutorium.html', 'src/gaestebuch.html'])
     .pipe(extension('.php'))
@@ -128,6 +161,8 @@ gulp.task('debug:src', ['clear:xamp'], function () {
   return;
 });
 
+
+// Upload to server
 gulp.task('deploy', function () {
   gulp.src(BUILD_DIR + '**')
     .pipe(sftp({

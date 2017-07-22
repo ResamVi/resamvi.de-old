@@ -1,256 +1,180 @@
 /* Variables */
-
-@background: #fdfdfd;
-@text: #333333;
-@text-light: #696969;
-@lol: #000000;
-
 /* Mixins */
-
 .flex-center {
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
-
 .cursive-font {
   font-family: 'Cinzel', serif;
 }
-
 .normal-font {
   font-family: 'Open Sans Condensed', sans-serif;
 }
-
-.margin-side(@width) {
-  margin-left: @width;
-  margin-right: @width;
-}
-
-// CSS
 * {
-  color: @text;
+  color: #333333;
 }
-
 .blog-start {
   width: 100%;
   min-height: 100vh;
-  .flex-center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
 }
-
 .jumbotron {
   background-color: white !important;
 }
-
-
 /* Used for recipe ingredients */
-
 ul {
   padding: 5px;
   list-style-type: none;
   background-color: #f5f2f0;
   border-radius: 10px;
   text-align: left;
-  li {
-    margin: 1%;
-  }
 }
-
-
+ul li {
+  margin: 1%;
+}
 /* Used for step by step list in recipes */
-
 ol {
   list-style-position: inside;
   padding-left: 10px;
 }
-
-
 /* Whole HTML background color */
-
 .container-fluid,
 html {
-  background-color: @background;
+  background-color: #fdfdfd;
 }
-
-
 /* "ResamVi" text stylings */
-
 .title {
   display: inline;
   font-size: 4em;
-  .cursive-font;
+  font-family: 'Cinzel', serif;
 }
-
-
 /* Smaller version of above for subtext */
-
 .subtitle {
   display: inline;
   font-size: 2em;
-  .cursive-font;
+  font-family: 'Cinzel', serif;
 }
-
-
 /* For header titles of other webpages */
-
 .caption {
   text-align: center;
   margin-bottom: 50px;
 }
-
-
 /* Dates put above titles in entries*/
-
 .entry-date {
-  .cursive-font;
-  color: @text-light;
+  font-family: 'Cinzel', serif;
+  color: #696969;
   margin: 0;
   margin-top: 25px;
 }
-
-
 /* Titles for entries */
-
 .entry-title {
-  .cursive-font;
+  font-family: 'Cinzel', serif;
   margin: 10px 0;
-  border-bottom: 1px solid @text;
+  border-bottom: 1px solid #333333;
 }
-
-
 /* Actual blog entry content */
-
 .entry-content {
-  .normal-font;
+  font-family: 'Open Sans Condensed', sans-serif;
   text-align: justify;
   font-size: 1.5em;
 }
-
-
 /* Maximum and minimum size of melon image */
-
 .logo {
   max-height: 315px;
   min-height: 100px;
   min-width: 100px;
 }
-
-
 /* Center the icons below header */
-
 .icons {
   display: inline;
   margin: 0 8%;
 }
-
-
 /* Center the icons below header */
-
 .subicons {
   display: inline-block;
   margin: 0 auto;
   visibility: hidden;
 }
-
 .quote {
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
-
 .cite {
-  font-size:0.5em;
-  white-space:nowrap;
+  font-size: 0.5em;
+  white-space: nowrap;
 }
-
 /* When the trophy is clicked icons appear */
-
 #trophy {
   cursor: pointer;
 }
-
 #smallarrow {
   visibility: hidden;
 }
-
-
 /* To align the melon image logo + a vertical line + text */
-
 #header {
-  .flex-center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   height: 20em;
-  .margin-side(5%);
+  margin-left: 5%;
+  margin-right: 5%;
 }
-
-
 /* Text below the logo */
-
 #description {
-  .cursive-font;
+  font-family: 'Cinzel', serif;
   font-size: 1.5em;
   text-align: center;
   margin-bottom: 50px;
 }
-
-
 /* Container to hold social media icons */
-
 #iconRow {
   width: 90%;
-  .margin-side(5%);
+  margin-left: 5%;
+  margin-right: 5%;
 }
-
-
 /* Contains more icons concerning my leet skills */
-
 #subiconContainer {
   height: 70px;
 }
-
-
 /* To evenly distribute horizontally (HACK)*/
-
 #vertical {
   text-align: justify;
   line-height: 0;
 }
-
-
 /* To evenly distribute horizontally (HACK)*/
-
 #vertical:after {
   content: "";
   width: 100%;
   display: inline-block;
   vertical-align: bottom;
 }
-
-
 /* To align startpage vertically */
-
 #vertical-alignment {
   min-height: 95%;
   min-height: 95vh;
   width: 100%;
-  .flex-center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
 }
-
-
 /* Holds the actual content, for horizontal alignment */
-
 #horizontal-alignment {
   width: 95vw;
   height: 50vh;
   position: relative;
 }
-
-
 /* Used for the main text */
-
 #blog-entries {
   margin: 50px auto 0 auto;
   width: 80%;
 }
-
-
 /* Same as blog-entries but for guest book */
-
 #guestbook-entries {
   width: 50%;
   margin: 0 auto;
@@ -258,32 +182,22 @@ html {
   border-radius: 25px;
   background-color: #f5f2f0;
 }
-
-
 /* Navigation below the blog-entries */
-
 #footer {
   width: 75%;
   margin: 100px 12.5% 50px 12.5%;
 }
-
-
 /* Horizontal gradient line seperating each blog entry */
-
 hr.gradient {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
 }
-
-
 /* Horizontal line separating first page (header) and second page (blog entries) */
-
 hr.separate {
   border-top: 1px dashed #8c8b8b;
   width: 80%;
 }
-
 .sandwich {
   position: relative;
   top: -15px;
@@ -292,46 +206,36 @@ hr.separate {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  .flex-center;
-  justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
-
 .glyphicon-menu-hamburger {
   font-size: 1.5em;
 }
-
 .search {
   visibility: hidden;
 }
-
-
 /* Buttons below each entry */
-
 #button {
   border: 2px solid #f5f2f0;
   border-radius: 25px;
 }
-
-
 /* ... with hover effect! */
-
 #button:hover {
   border-color: #a3a3a3;
 }
-
-
 /* start of large tablet styles */
-
 @media screen and (max-width: 991px) {
   #button {
     width: 100%;
     margin-bottom: 50px;
   }
 }
-
-
 /* start of medium tablet styles */
-
 @media screen and (max-width: 767px) {
   .title {
     font-size: 3em;
@@ -341,10 +245,7 @@ hr.separate {
     margin-bottom: 20px;
   }
 }
-
-
 /* start of phone styles */
-
 @media screen and (max-width: 479px) {
   .title {
     font-size: 2em;
@@ -355,4 +256,40 @@ hr.separate {
   #header {
     height: 10em;
   }
+}
+/* For the name of blog entries */
+.guestbook-title {
+  font-family: 'Cinzel', serif;
+  margin: 10px 0;
+}
+/* Actual guestbook entry */
+.guestbook-content {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: justify;
+  font-size: 1.5em;
+  margin-bottom: 5%;
+}
+/* Wrapper for single guest book entry */
+.guestbook-entry {
+  margin-left: 10%;
+}
+/* Error message styling */
+.alert {
+  color: white;
+  text-align: center;
+  background-color: #f44336;
+}
+/* Display only when error occured */
+#fail {
+  top: 0;
+  display: none;
+  position: absolute;
+}
+/* Seperate each blog entry */
+hr.style {
+  border: 0;
+  height: 1px;
+  width: 80%;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
