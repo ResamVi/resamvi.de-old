@@ -1,5 +1,6 @@
 var entryCount = 0;
 var searchTerm = "";
+var ready = true;
 
 function load() {
 
@@ -10,25 +11,26 @@ function load() {
   // End of the document reached?
   if ($(document).height() - $(window).height() - 100 <= $(window).scrollTop()) {
 
-    $.ajax({
-      url: 'php/print-entry.php',
-      data: {
-        count: entryCount,
-        search: $('#searchBox').val(),
-        programming: $("#programming").prop("checked"),
-        baking: $("#baking").prop("checked"),
-        misc: $("#misc").prop("checked")
-      },
-      async: false,
-      dataType: 'html',
-      success: function (html) {
-        $('#blog-entries').append(html);
-      },
-      error: function () {
-        // Do nothing
-      }
-    });
-    entryCount++;
+    if (ready) {
+      ready = false;
+      $.ajax({
+        url: 'php/print-entry.php',
+        data: {
+          count: entryCount,
+          search: $('#searchBox').val(),
+          programming: $("#programming").prop("checked"),
+          baking: $("#baking").prop("checked"),
+          misc: $("#misc").prop("checked")
+        },
+        dataType: 'html',
+        success: function (html) {
+          $('#blog-entries').append(html);
+          ready = true;
+        },
+        error: function () { }
+      });
+      entryCount++;
+    }
   }
 }
 

@@ -28,7 +28,7 @@ const BUILD_DIR = 'build/';
 const SRC_DIR = 'src/';
 const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
-const SCRIPT_DECLARATION = '<script src="js/activate-tooltip.js"></script><script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script>';
+const SCRIPT_DECLARATION = '<script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script>';
 const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
 
 // Stage src to server
@@ -39,7 +39,6 @@ gulp.task('default', function () {
 // Replace all keys/imports used as dev and minify
 gulp.task('minify', function () {
   gulp.src([HTML_FILES, '!src/index.html', '!src/tutorium.html', '!src/gaestebuch.html'])
-    .pipe(replace('<script src="js/activate-tooltip.js"></script>', DEFAULT_SCRIPT))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
