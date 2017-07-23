@@ -5,6 +5,7 @@
     // This is the list of .html file names of entries I've done so far
     // 0 = Programming, 1 = Baking, 2 = Miscallenous
     $entries = array(
+        "rheinuferlauf2017.html" => 2,
         "apfelkuchen.html" => 1,
         "charitywalkandrun2017.html" => 2,
         "kaesekuchen.html" => 1, 

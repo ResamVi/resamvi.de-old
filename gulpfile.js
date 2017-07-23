@@ -33,7 +33,7 @@ const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
 
 // Stage src to server
 gulp.task('default', function () {
-  sequence('minify', 'combine', 'copy', 'deploy');
+  sequence('update', 'minify', 'combine', 'copy', 'deploy');
 });
 
 // Replace all keys/imports used as dev and minify
