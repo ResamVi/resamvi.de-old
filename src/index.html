@@ -50,7 +50,7 @@
         }
 
         // Get data
-        $date = date("l jS \of F Y H:i:s A", time() + 21600);
+        $date = date("Y-m-d H:i:s", time() + 21600);
         $ip = $_SERVER["REMOTE_ADDR"];
         $agent = $_SERVER['HTTP_USER_AGENT'];
         $language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -133,32 +133,20 @@
           <input type="text" class="form-control" placeholder="Suche" id="searchBox">
         </div>
         <div style="margin-top:5px;">
-          <!--<div class="btn btn-default" id="check">-->
-            <div class="checkbox-inline">
-              <label style="font-weight: normal">
-                <input type="checkbox" id="programming" checked>Programmierung
-              </label>
-            </div>
-          <!--</div>-->
-          <!--<div class="btn btn-default" id="check">-->
-            <div class="checkbox-inline">
-              <label style="font-weight: normal">
-                <input type="checkbox" id="baking" checked>Backen
-              </label>
-            </div>
-          <!--</div>-->
-          <!--<div class="btn btn-default" id="check">-->
-            <div class="checkbox-inline">
-              <label style="font-weight: normal">
-                <input type="checkbox" id="misc" checked>Sonstiges
-              </label>
-            </div>
-          <!--</div>-->
+          <div class="btn btn-success" id="programming">
+              Programmierung
+          </div>
+          <div class="btn btn-success" id="baking">
+            Backen
+          </div>
+          <div class="btn btn-success" id="misc">
+            Sonstiges
+          </div>
         </div>
       </div>
     </form>
 
-    <section class="row" id="blog-entries">
+    <section class="row" id="blog-entries" style="margin-bottom:5%;">
       <!-- Entries displayed here -->
     </section>
 </body>

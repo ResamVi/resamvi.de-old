@@ -51,8 +51,6 @@
     // Load document (if there are any to load)
     if(intval($_GET["count"]) < count($filter)) {
         $doc->loadHTML(file_get_contents("../" . $filter[$_GET["count"]]));
-    }else{
-         header("HTTP/1.1 404 Not Found");
     }
     
     // Find element with id

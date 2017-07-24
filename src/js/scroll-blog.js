@@ -9,7 +9,7 @@ function load() {
   //console.log("Screen size: " + $(window).height());
 
   // End of the document reached?
-  if ($(document).height() - $(window).height() - 100 <= $(window).scrollTop()) {
+  if ($(document).height() - $(window).height() - 100 <= $(window).scrollTop() && (programming || baking || misc)) {
 
     if (ready) {
       ready = false;
@@ -18,14 +18,15 @@ function load() {
         data: {
           count: entryCount,
           search: $('#searchBox').val(),
-          programming: $("#programming").prop("checked"),
-          baking: $("#baking").prop("checked"),
-          misc: $("#misc").prop("checked")
+          programming: programming, // @see filter-blog.js
+          baking: baking,
+          misc: misc
         },
         dataType: 'html',
         success: function (html) {
           $('#blog-entries').append(html);
           ready = true;
+          console.log("SUCCESS");
         },
         error: function () { }
       });
