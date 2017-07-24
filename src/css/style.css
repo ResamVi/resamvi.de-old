@@ -95,7 +95,10 @@ html {
 /* Center the icons below header */
 .icons {
   display: inline;
-  margin: 0 8%;
+  margin-right: 10%;
+}
+.icons:hover {
+  text-decoration: none;
 }
 /* Center the icons below header */
 .subicons {
