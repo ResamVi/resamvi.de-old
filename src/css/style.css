@@ -47,9 +47,12 @@ ol {
 html {
   background-color: #fdfdfd;
 }
+.notice {
+  font-family: 'Space Mono';
+}
 /* "ResamVi" text stylings */
 .title {
-  display: inline;
+  /*display: inline;*/
   font-size: 4em;
   font-family: 'Cinzel', serif;
 }
