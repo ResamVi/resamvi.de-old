@@ -9,6 +9,7 @@ var sequence = require('run-sequence');
 var sftp = require('gulp-sftp');
 var clean = require('gulp-clean');
 var key = require('key');
+var psi = require('psi');
 var watchLess = require('gulp-watch-less');
 var less = require('gulp-less');
 var LessAutoprefix = require('less-plugin-autoprefix');
@@ -16,6 +17,9 @@ var autoprefix = new LessAutoprefix({
   browsers: ['last 2 versions']
 });
 
+
+//https://github.com/postcss/gulp-postcss
+//https://www.npmjs.com/package/postcss-uncss
 
 const HTML_FILES = 'src/*.html';
 const HTML_PHP_FILES = ['src/index.html', 'src/tutorium.html', 'src/gaestebuch.html'];
@@ -28,7 +32,7 @@ const BUILD_DIR = 'build/';
 const SRC_DIR = 'src/';
 const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
-const SCRIPT_DECLARATION = '<script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script>';
+const SCRIPT_DECLARATION = '<script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/button-check.js"></script>';
 const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
 
 // Stage src to server
@@ -138,7 +142,7 @@ gulp.task('debug:save', ['clear:local'], function () {
 
 // Copies the build folder to htdocs
 gulp.task('debug:build', ['clear:xamp'], function () {
-  sequence('minify', 'combine', 'copy');
+  sequence('update', 'minify', 'combine', 'copy');
 
   gulp.src(BUILD_DIR + '**')
     .pipe(gulp.dest(XAMP_DIR));
@@ -160,6 +164,16 @@ gulp.task('debug:src', ['clear:xamp'], function () {
   return;
 });
 
+// Speed insights
+gulp.task('insight', function () {
+    return psi('https://resamvi.de/', {
+        nokey: true,
+        strategy: 'mobile',
+    }).then(function (data) {
+        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+        console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
+    });
+});
 
 // Upload to server
 gulp.task('deploy', function () {

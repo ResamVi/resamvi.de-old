@@ -51,14 +51,11 @@
     // Load document (if there are any to load)
     if(intval($_GET["count"]) < count($filter)) {
         $doc->loadHTML(file_get_contents("../" . $filter[$_GET["count"]]));
-    }
-    
-    // Find element with id
-    $entry = $doc->getElementById('blog-entries');
-    $footer = $doc->getElementById('footer');
+        $entry = $doc->getElementById('blog-entries');
+        $footer = $doc->getElementById('footer');
 
-    // Output
-    echo $doc->saveHtml($entry);
-    echo $doc->saveHtml($footer);
-    echo "<hr class=\"gradient\">";
+        echo $doc->saveHtml($entry);
+        echo $doc->saveHtml($footer);
+        echo "<hr class=\"gradient\">";
+    }
 ?>

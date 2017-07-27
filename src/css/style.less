@@ -1,3 +1,5 @@
+@import "bootstrap/bootstrap.less";
+
 /* Variables */
 
 @background: #fdfdfd;
@@ -23,6 +25,19 @@
 .margin-side(@width) {
   margin-left: @width;
   margin-right: @width;
+}
+
+.center-X(@column) {
+  .make-md-column(@column);
+  .make-md-column-offset(@column);
+}
+
+.center-3 {
+  .center-X(3);
+}
+
+.center-4 {
+  .center-X(4);
 }
 
 // CSS
@@ -253,7 +268,7 @@ html {
 /* Used for the main text */
 
 #blog-entries {
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
   width: 80%;
 }
 
@@ -345,6 +360,7 @@ hr.separate {
   .title {
     font-size: 3em;
   }
+  
   #header {
     height: 10em;
     margin-bottom: 20px;
@@ -361,6 +377,11 @@ hr.separate {
   .icons {
     margin: 0 5px;
   }
+  
+  .entry-title {
+    font-size: 25px;
+  }
+  
   #header {
     height: 10em;
   }

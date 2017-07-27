@@ -26,7 +26,6 @@ function load() {
         success: function (html) {
           $('#blog-entries').append(html);
           ready = true;
-          console.log("SUCCESS");
         },
         error: function () { }
       });
