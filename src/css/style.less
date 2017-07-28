@@ -1,5 +1,3 @@
-@import "bootstrap/bootstrap.less";
-
 /* Variables */
 
 @background: #fdfdfd;
@@ -25,19 +23,6 @@
 .margin-side(@width) {
   margin-left: @width;
   margin-right: @width;
-}
-
-.center-X(@column) {
-  .make-md-column(@column);
-  .make-md-column-offset(@column);
-}
-
-.center-3 {
-  .center-X(3);
-}
-
-.center-4 {
-  .center-X(4);
 }
 
 // CSS
@@ -360,7 +345,6 @@ hr.separate {
   .title {
     font-size: 3em;
   }
-  
   #header {
     height: 10em;
     margin-bottom: 20px;
@@ -377,12 +361,63 @@ hr.separate {
   .icons {
     margin: 0 5px;
   }
-  
   .entry-title {
     font-size: 25px;
   }
-  
   #header {
     height: 10em;
   }
+}
+
+// Gästebuch
+
+/* For the name of blog entries */
+
+.guestbook-title {
+  .cursive-font;
+  margin: 10px 0;
+}
+
+
+/* Actual guestbook entry */
+
+.guestbook-content {
+  .entry-content;
+  margin-bottom: 5%;
+}
+
+
+/* Wrapper for single guest book entry */
+
+.guestbook-entry {
+  margin-left: 10%;
+}
+
+
+/* Error message styling */
+
+.alert {
+  color: white;
+  text-align: center;
+  background-color: #f44336;
+}
+
+
+/* Display only when error occured */
+
+#fail {
+  top: 0;
+  display: none;
+  position: absolute;
+}
+
+
+/* Seperate each blog entry */
+
+hr.style {
+  border: 0;
+  height: 1px;
+  width: 80%;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }

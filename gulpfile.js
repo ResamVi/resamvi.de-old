@@ -8,18 +8,16 @@ var replace = require('gulp-replace');
 var sequence = require('run-sequence');
 var sftp = require('gulp-sftp');
 var clean = require('gulp-clean');
-var key = require('key');
 var psi = require('psi');
 var watchLess = require('gulp-watch-less');
 var less = require('gulp-less');
-var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({
-  browsers: ['last 2 versions']
-});
+var uncss = require('gulp-uncss');
 
+var LessAutoprefix = require('less-plugin-autoprefix'),
+  autoprefix = new LessAutoprefix({
+    browsers: ['last 2 versions']
+  });
 
-//https://github.com/postcss/gulp-postcss
-//https://www.npmjs.com/package/postcss-uncss
 
 const HTML_FILES = 'src/*.html';
 const HTML_PHP_FILES = ['src/index.html', 'src/tutorium.html', 'src/gaestebuch.html'];
@@ -32,23 +30,27 @@ const BUILD_DIR = 'build/';
 const SRC_DIR = 'src/';
 const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
-const SCRIPT_DECLARATION = '<script src="js/scroll-blog.js"></script><script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/button-check.js"></script>';
+const SCRIPT_DECLARATION = '<script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/infinite_scroll.js"></script><script src="js/scroll-blog.js"></script>';
 const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
 
 // Stage src to server
 gulp.task('default', function () {
-  sequence('update', 'minify', 'combine', 'copy', 'deploy');
+  sequence('update', 'reduce', 'combine', 'copy', 'deploy');
 });
 
 // Replace all keys/imports used as dev and minify
-gulp.task('minify', function () {
+gulp.task('reduce', function () {
+
+  // Minify HTML
   gulp.src([HTML_FILES, '!src/index.html', '!src/tutorium.html', '!src/gaestebuch.html'])
+    .pipe(replace('index.html', 'index.php'))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
     }))
     .pipe(gulp.dest(BUILD_DIR));
 
+  // Uncomment PHP Blocks, minify HTML
   gulp.src(HTML_PHP_FILES)
     .pipe(extension('.php'))
     .pipe(replace('<!--<?php', '<?php'))
@@ -57,12 +59,12 @@ gulp.task('minify', function () {
       collapseWhitespace: true,
       removeComments: true
     }))
+
+    // Remove unnecessary links to scripts/css
     .pipe(replace(SCRIPT_DECLARATION, DEFAULT_SCRIPT))
     .pipe(replace('<script src="js/validate-form.js"></script>', DEFAULT_SCRIPT))
     .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
-    .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
     .pipe(replace('<link rel="stylesheet" type="text/css" href="css/gaestebuch.css">', ''))
-    .pipe(replace('"root", "password"', key()))
     .pipe(gulp.dest(BUILD_DIR));
 
   return;
@@ -89,8 +91,13 @@ gulp.task('combine', function () {
     .pipe(uglify())
     .pipe(gulp.dest(BUILD_DIR + 'js/'));
 
+
+  // Process CSS  
   gulp.src(CSS_FILES)
     .pipe(concat('style.css'))
+    .pipe(uncss({
+      html: [SRC_DIR + '*.html']
+    }))
     .pipe(cssmin())
     .pipe(gulp.dest(BUILD_DIR + 'css/'));
 
@@ -142,7 +149,7 @@ gulp.task('debug:save', ['clear:local'], function () {
 
 // Copies the build folder to htdocs
 gulp.task('debug:build', ['clear:xamp'], function () {
-  sequence('update', 'minify', 'combine', 'copy');
+  sequence('update', 'reduce', 'combine', 'copy');
 
   gulp.src(BUILD_DIR + '**')
     .pipe(gulp.dest(XAMP_DIR));
@@ -166,13 +173,13 @@ gulp.task('debug:src', ['clear:xamp'], function () {
 
 // Speed insights
 gulp.task('insight', function () {
-    return psi('https://resamvi.de/', {
-        nokey: true,
-        strategy: 'mobile',
-    }).then(function (data) {
-        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
-        console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
-    });
+  return psi('https://resamvi.de/', {
+    nokey: true,
+    strategy: 'mobile',
+  }).then(function (data) {
+    console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+    console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
+  });
 });
 
 // Upload to server
