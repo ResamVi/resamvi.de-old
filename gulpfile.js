@@ -31,11 +31,11 @@ const SRC_DIR = 'src/';
 const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
 const SCRIPT_DECLARATION = '<script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/infinite_scroll.js"></script><script src="js/scroll-blog.js"></script>';
-const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
+const DEFAULT_SCRIPT = '<script src="js/script.js" async></script>';
 
 // Stage src to server
 gulp.task('default', function () {
-  sequence('update', 'reduce', 'combine', 'copy', 'deploy');
+  sequence('update', 'reduce', 'combine', 'copy');
 });
 
 // Replace all keys/imports used as dev and minify
@@ -95,9 +95,6 @@ gulp.task('combine', function () {
   // Process CSS  
   gulp.src(CSS_FILES)
     .pipe(concat('style.css'))
-    .pipe(uncss({
-      html: [SRC_DIR + '*.html']
-    }))
     .pipe(cssmin())
     .pipe(gulp.dest(BUILD_DIR + 'css/'));
 
@@ -184,7 +181,7 @@ gulp.task('insight', function () {
 
 // Upload to server
 gulp.task('deploy', function () {
-  gulp.src(BUILD_DIR + '**')
+  gulp.src([BUILD_DIR + '**', BUILD_DIR + '.htaccess'])
     .pipe(sftp({
       host: 'server102.web-hosting.com',
       port: 21098,
