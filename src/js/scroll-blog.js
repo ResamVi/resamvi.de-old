@@ -1,33 +1,12 @@
-var entryCount = 0;
-var searchTerm = "";
-var ready = true;
+var nextPages = ['rheinuferlauf2017', 'apfelkuchen', 'charitywalkandrun2017', 'kaesekuchen', 'screenbounce', 'bouncingball', 'chocolatechipcookies', 'start', 'erster'];
 
 $(document).ready(function () {
-  $(document).infiniteJscroll({
-    offset: 0,
-    bottomOfPage: function () {
-      addContent();
-    }
+  $('#blog-entries').infiniteScroll({
+    path: function () {
+      return nextPages[this.loadCount] + '.html';
+    },
+    append: '.container-fluid',
+    status: '.scroller-status',
+    scrollThreshold: 1
   });
 });
-
-function addContent() {
-
-  $.ajax({
-    url: 'php/print-entry.php',
-    data: {
-      count: entryCount,
-      search: $('#searchBox').val(),
-      programming: programming, // @see filter-blog.js
-      baking: baking,
-      misc: misc
-    },
-    dataType: 'html',
-    success: function (html) {
-      entryCount++;
-      $('#blog-entries').append(html);
-      ready = true;
-    },
-    error: function () {}
-  });
-}

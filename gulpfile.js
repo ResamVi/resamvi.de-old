@@ -30,12 +30,12 @@ const BUILD_DIR = 'build/';
 const SRC_DIR = 'src/';
 const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
-const SCRIPT_DECLARATION = '<script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/infinite_scroll.js"></script><script src="js/scroll-blog.js"></script>';
-const DEFAULT_SCRIPT = '<script src="js/script.js" async></script>';
+const SCRIPT_DECLARATION = '<script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/infinite-scroll.pkgd.min.js"></script><script src="js/scroll-blog.js"></script>';
+const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
 
 // Stage src to server
 gulp.task('default', function () {
-  sequence('update', 'reduce', 'combine', 'copy');
+  sequence('update', 'reduce', 'combine', 'copy', 'deploy');
 });
 
 // Replace all keys/imports used as dev and minify
@@ -166,17 +166,6 @@ gulp.task('debug:src', ['clear:xamp'], function () {
     .pipe(gulp.dest(XAMP_DIR));
 
   return;
-});
-
-// Speed insights
-gulp.task('insight', function () {
-  return psi('https://resamvi.de/', {
-    nokey: true,
-    strategy: 'mobile',
-  }).then(function (data) {
-    console.log('Speed score: ' + data.ruleGroups.SPEED.score);
-    console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
-  });
 });
 
 // Upload to server
