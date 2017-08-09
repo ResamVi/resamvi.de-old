@@ -24,6 +24,7 @@ function addContent() {
     },
     dataType: 'html',
     success: function (html) {
+      entryCount++;
       $('#blog-entries').append(html);
       ready = true;
     },
