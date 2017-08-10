@@ -1,12 +1,19 @@
-var nextPages = ['rheinuferlauf2017', 'apfelkuchen', 'charitywalkandrun2017', 'kaesekuchen', 'screenbounce', 'bouncingball', 'chocolatechipcookies', 'start', 'erster'];
+var entries = ['rheinuferlauf2017', 'apfelkuchen', 'charitywalkandrun2017', 'kaesekuchen', 'screenbounce', 'bouncingball', 'chocolatechipcookies', 'start', 'erster'];
+
+
 
 $(document).ready(function () {
-  $('#blog-entries').infiniteScroll({
+
+  var $container = $('#blog-entries').infiniteScroll({
     path: function () {
-      return nextPages[this.loadCount] + '.html';
+      return entries[this.loadCount] + '.html';
     },
     append: '.container-fluid',
     status: '.scroller-status',
     scrollThreshold: 1
+  });
+
+  $container.on('append.infiniteScroll', function (event, response, path, items) {
+    filter();
   });
 });

@@ -30,7 +30,7 @@ const BUILD_DIR = 'build/';
 const SRC_DIR = 'src/';
 const XAMP_DIR = 'C:\\xampp\\htdocs\\';
 
-const SCRIPT_DECLARATION = '<script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/infinite-scroll.pkgd.min.js"></script><script src="js/scroll-blog.js"></script>';
+const SCRIPT_DECLARATION = '<script src="js/appear-surface.js"></script><script src="js/show-search.js"></script><script src="js/infinite-scroll.js"></script><script src="js/filter-blog.js"></script><script src="js/search-entry.js"></script><script src="js/scroll-blog.js">';
 const DEFAULT_SCRIPT = '<script src="js/script.js"></script>';
 
 // Stage src to server
@@ -65,6 +65,7 @@ gulp.task('reduce', function () {
     .pipe(replace('<script src="js/validate-form.js"></script>', DEFAULT_SCRIPT))
     .pipe(replace('<link rel="stylesheet" type="text/css" href="css/animate.css">', ''))
     .pipe(replace('<link rel="stylesheet" type="text/css" href="css/gaestebuch.css">', ''))
+    .pipe(replace('<link rel="stylesheet" type="text/css" href="css/loading.css">', ''))
     .pipe(gulp.dest(BUILD_DIR));
 
   return;

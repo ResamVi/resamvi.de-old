@@ -1,19 +1,25 @@
-var programming = true;
-var baking = true;
-var misc = true;
+var progEntries = []; // TODO: Add "Editing" categor
+var miscEntries = ['#rheinuferlauf2017', '#charitywalkandrun2017', '#screenbounce', '#bouncingball', '#start', '#erster'];
+var bakeEntries = ['#apfelkuchen', '#kaesekuchen', '#chocolatechipcookies'];
 
-var reload = function (event) {
-  $("#blog-entries").empty();
-  entryCount = 0;
-  load(); // @see: scroll-blog.js
+var filterProg = true;
+var filterBaking = true;
+var filterMisc = true;
+
+function filter(event) {
+  if(!filterMisc) $(miscEntries.join(", ")).css('display', 'none'); else  $(miscEntries.join(", ")).css('display', 'block');
+  
+  if(!filterProg) $(progEntries.join(", ")).css('display', 'none'); else $(progEntries.join(", ")).css('display', 'block');
+  
+  if(!filterBaking) $(bakeEntries.join(", ")).css('display', 'none'); else $(bakeEntries.join(", ")).css('display', 'block');
 };
 
 $(document).ready(function () {
 
   $('#programming').click(function () {
-    programming = !programming;
+    filterProg = !filterProg;
 
-    if (!programming) {
+    if (!filterProg) {
       $('#programming').removeClass('btn-success');
       $('#programming').addClass('btn-default');
     } else {
@@ -21,13 +27,13 @@ $(document).ready(function () {
       $('#programming').removeClass('btn-default');
     }
 
-    reload();
+    filter();
   });
 
   $('#baking').click(function () {
-    baking = !baking;
+    filterBaking = !filterBaking;
 
-    if (!baking) {
+    if (!filterBaking) {
       $('#baking').removeClass('btn-success');
       $('#baking').addClass('btn-default');
     } else {
@@ -35,12 +41,12 @@ $(document).ready(function () {
       $('#baking').removeClass('btn-default');
     }
 
-    reload();
+    filter();
   });
   $('#misc').click(function () {
-    misc = !misc;
+    filterMisc = !filterMisc;
 
-    if (!misc) {
+    if (!filterMisc) {
       $('#misc').removeClass('btn-success');
       $('#misc').addClass('btn-default');
     } else {
@@ -48,6 +54,6 @@ $(document).ready(function () {
       $('#misc').removeClass('btn-default');
     }
 
-    reload();
+    filter();
   });
 });
