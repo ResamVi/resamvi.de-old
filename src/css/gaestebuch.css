@@ -26,6 +26,9 @@
 .jumbotron {
   background-color: white !important;
 }
+.cursive {
+  font-style: italic;
+}
 /* Used for recipe ingredients */
 ul {
   padding: 5px;
@@ -52,7 +55,6 @@ html {
 }
 /* "ResamVi" text stylings */
 .title {
-  /*display: inline;*/
   font-size: 4em;
   font-family: 'Cinzel', serif;
 }
@@ -61,6 +63,10 @@ html {
   display: inline;
   font-size: 2em;
   font-family: 'Cinzel', serif;
+}
+.align {
+  display: inline-block;
+  width: 275px;
 }
 /* For header titles of other webpages */
 .caption {
@@ -107,7 +113,8 @@ html {
   visibility: hidden;
 }
 .quote {
-  margin-bottom: 50px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.2em;
 }
 .cite {
   font-size: 0.5em;

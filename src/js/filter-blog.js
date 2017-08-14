@@ -1,4 +1,4 @@
-var progEntries = []; // TODO: Add "Editing" categor
+var progEntries = ['#statement']; // TODO: Add "Editing" categor
 var miscEntries = ['#rheinuferlauf2017', '#charitywalkandrun2017', '#screenbounce', '#bouncingball', '#start', '#erster'];
 var bakeEntries = ['#apfelkuchen', '#kaesekuchen', '#chocolatechipcookies'];
 
