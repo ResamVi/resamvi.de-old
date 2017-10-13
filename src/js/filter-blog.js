@@ -1,4 +1,4 @@
-var progEntries = ['#statement']; // TODO: Add "Editing" categor
+var progEntries = ['#spayle', '#statement']; // TODO: Add "Editing" categor
 var miscEntries = ['#100abos','#rheinuferlauf2017', '#charitywalkandrun2017', '#screenbounce', '#bouncingball', '#start', '#erster'];
 var bakeEntries = ['#apfelkuchen', '#kaesekuchen', '#chocolatechipcookies'];
 
@@ -8,9 +8,7 @@ var filterMisc = true;
 
 function filter(event) {
   if(!filterMisc) $(miscEntries.join(", ")).css('display', 'none'); else  $(miscEntries.join(", ")).css('display', 'block');
-  
   if(!filterProg) $(progEntries.join(", ")).css('display', 'none'); else $(progEntries.join(", ")).css('display', 'block');
-  
   if(!filterBaking) $(bakeEntries.join(", ")).css('display', 'none'); else $(bakeEntries.join(", ")).css('display', 'block');
 };
 
