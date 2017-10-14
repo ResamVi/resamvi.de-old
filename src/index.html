@@ -55,7 +55,7 @@
         $agent = $_SERVER['HTTP_USER_AGENT'];
         $language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 
-        $query = "INSERT INTO visits (date, ip, agent, language) VALUES (\""
+        $query = "REPLACE INTO visits (date, ip, agent, language) VALUES (\""
             . $date . "\", \""
             . $ip . "\", \""
             . $agent . "\", \""
