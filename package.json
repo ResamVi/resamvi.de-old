@@ -20,9 +20,7 @@
     "url": "https://github.com/ResamVi/resamvi.de/issues"
   },
   "homepage": "https://github.com/ResamVi/resamvi.de#readme",
-  "dependencies": {
-    "less-plugin-autoprefix": "^1.5.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
@@ -38,8 +36,10 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
     "gulp-watch-less": "^1.0.1",
+    "less-plugin-autoprefix": "^1.5.1",
     "postcss-less-engine": "^0.6.2",
     "psi": "^3.0.0",
-    "run-sequence": "^2.0.0"
+    "run-sequence": "^2.0.0",
+    "webpack": "^4.4.1"
   }
 }
