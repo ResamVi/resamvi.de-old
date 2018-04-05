@@ -4,7 +4,8 @@
   "description": "a website including the shit julien does",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,24 +23,14 @@
   "homepage": "https://github.com/ResamVi/resamvi.de#readme",
   "dependencies": {},
   "devDependencies": {
-    "cssnano": "^3.10.0",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-clean-css": "^3.7.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-ext-replace": "^0.3.0",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-less": "^3.3.2",
-    "gulp-postcss": "^7.0.0",
-    "gulp-replace": "^0.6.1",
-    "gulp-sftp": "^0.1.5",
-    "gulp-uglify": "^3.0.0",
-    "gulp-uncss": "^1.0.6",
-    "gulp-watch-less": "^1.0.1",
-    "less-plugin-autoprefix": "^1.5.1",
-    "postcss-less-engine": "^0.6.2",
-    "psi": "^3.0.0",
-    "run-sequence": "^2.0.0",
-    "webpack": "^4.4.1"
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^3.6.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
   }
 }

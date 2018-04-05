@@ -1,3 +1,3 @@
 /node_modules/
-.ftppass
-gulpfile.js
+build/
+build2/
