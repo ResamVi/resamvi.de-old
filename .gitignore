@@ -1,3 +1,4 @@
 /node_modules/
 build/
-build2/
+nginx.conf
+default.conf

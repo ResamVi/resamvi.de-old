@@ -1,8 +1,7 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
   var visible = false;
 
-  $(".sandwich").click(function () {
+  $(".sandwich").click(function() {
     visible = !visible;
     if (visible) {
       $(".search").css("visibility", "visible");
@@ -12,5 +11,4 @@ $(document).ready(function () {
       $(".search").removeClass("animated fadeIn");
     }
   });
-
 });

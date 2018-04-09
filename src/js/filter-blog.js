@@ -1,19 +1,29 @@
-var progEntries = ['#spayle', '#statement']; // TODO: Add "Editing" categor
-var miscEntries = ['#100abos','#rheinuferlauf2017', '#charitywalkandrun2017', '#screenbounce', '#bouncingball', '#start', '#erster'];
+var progEntries = ['#spayle', '#statement']; // TODO: Add 'Editing' categor
+var miscEntries = [
+  '#100abos',
+  '#rheinuferlauf2017',
+  '#charitywalkandrun2017',
+  '#screenbounce',
+  '#bouncingball',
+  '#start',
+  '#erster'
+];
 var bakeEntries = ['#apfelkuchen', '#kaesekuchen', '#chocolatechipcookies'];
 
 var filterProg = true;
 var filterBaking = true;
 var filterMisc = true;
 
-function filter(event) {
-  if(!filterMisc) $(miscEntries.join(", ")).css('display', 'none'); else  $(miscEntries.join(", ")).css('display', 'block');
-  if(!filterProg) $(progEntries.join(", ")).css('display', 'none'); else $(progEntries.join(", ")).css('display', 'block');
-  if(!filterBaking) $(bakeEntries.join(", ")).css('display', 'none'); else $(bakeEntries.join(", ")).css('display', 'block');
-};
+function filter (event) {
+  if (!filterMisc) $(miscEntries.join(', ')).css('display', 'none');
+  else $(miscEntries.join(', ')).css('display', 'block');
+  if (!filterProg) $(progEntries.join(', ')).css('display', 'none');
+  else $(progEntries.join(', ')).css('display', 'block');
+  if (!filterBaking) $(bakeEntries.join(', ')).css('display', 'none');
+  else $(bakeEntries.join(', ')).css('display', 'block');
+}
 
 $(document).ready(function () {
-
   $('#programming').click(function () {
     filterProg = !filterProg;
 
