@@ -8,13 +8,13 @@ module.exports = {
     entry: './src/index.js',
     
     output: {
+        filename: 'script.js',
         path: path.resolve(__dirname, 'build'),
-        filename: 'index.js'
     },
-    
+
     module: {
         rules: [
-            
+
             /**
              *  CSS Files for the website have to be concatenated and minimized
              * into a single style.css file
@@ -39,18 +39,19 @@ module.exports = {
             {
                 test: /\.(gif|png|jpe?g|ico|webm)/,
                 use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'img/'
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img/'
+                        },
                     },
-                },
-                {
-                    loader: 'image-webpack-loader',
-                    options: {
-                        bypassOnDebug: true,
-                    },
-                }]
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                        },
+                    }
+                ]
             },
 
             /**
@@ -63,17 +64,20 @@ module.exports = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'fonts/'
-                    }                    
+                    }
                 }]
             }
         ]
     },
+
     plugins: [
         new ExtractTextPlugin('style.css'),
 
-        new CopyWebpackPlugin([
-            { from: 'src/html/', to: '.' }
-        ]),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'src/html/index.html',
+            inject: 'body'
+        }),
 
         /**
          * Just copy the SPAYLE game without any processing
@@ -82,7 +86,11 @@ module.exports = {
             { from: 'src/game/', to: 'game/' }
         ]),*/
 
-        new UglifyJsPlugin()
+        new UglifyJsPlugin(),
+
+        new CopyWebpackPlugin([
+            {from: 'src/html/', to: './'}
+        ])
     ],
 
     mode: "development"

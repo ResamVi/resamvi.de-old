@@ -18,9 +18,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- CSS -->
-  <!--<link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/loading.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">-->
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <!-- Fonts -->
@@ -28,46 +25,9 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
-  <!-- Scripts -->
-  <!--<script src="js/appear-surface.js"></script>
-  <script src="js/show-search.js"></script>
-  <script src="js/infinite-scroll.js"></script>
-  <script src="js/filter-blog.js"></script>
-  <script src="js/search-entry.js"></script>
-  <script src="js/scroll-blog.js"></script>-->
-  <script src="index.js"></script>
 </head>
 
 <body>
-
-  <!--<?php
-        // ---------------------------------------------- Track user ---------------------------------------------
-        $conn = new mysqli("localhost", "resatult", "Z2DYTa7-YnVHN", "resatult_data");
-        $conn->set_charset("utf8");
-
-        // check connection
-        if ($conn->connect_errno) {
-            printf("Connect failed: %s\n", $mysqli->connect_error);
-            exit();
-        }
-
-        // Get data
-        $date = date("Y-m-d H:i:s", time() + 21600);
-        $ip = $_SERVER["REMOTE_ADDR"];
-        $agent = $_SERVER['HTTP_USER_AGENT'];
-        $language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-
-        $query = "REPLACE INTO visits (date, ip, agent, language) VALUES (\""
-            . $date . "\", \""
-            . $ip . "\", \""
-            . $agent . "\", \""
-            . $language . "\")";
-
-        $conn->query($query);
-
-        // close connection
-        $conn->close();
-        ?>-->
 
   <section class="jumbotron blog-start">
     <div class="container">
@@ -89,14 +49,14 @@
       <div class="row" id="iconRow">
         <div class="col-md-8 col-md-offset-2 text-center">
           <a href="https://github.com/ResamVi" class="icons">
-            <img src="img//github48.png" alt="github">
+            <img src="img/github48.png" alt="github">
           </a>
 
           <a href="https://www.hackerrank.com/ResamVi" class="icons">
-            <img src="img//HackerRank_logo.png" alt="hackerrank">
+            <img src="img/HackerRank_logo.png" alt="hackerrank">
           </a>
           <a href="https://www.youtube.com/channel/UCXUsCsOauNNuUwFLjYeyTPA" class="icons">
-            <img src="img//youtube48.png" alt="youtube">
+            <img src="img/youtube48.png" alt="youtube">
           </a>
         </div>
       </div>
