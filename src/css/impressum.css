@@ -1,0 +1,30 @@
+#title {
+    font-family: Cinzel,serif;
+    text-align: center;
+    font-size: 4em;
+}
+
+#quote {
+    font-family: 'Open Sans';
+    text-align: center;
+    font-size: 2em;
+}
+
+#cite {
+    text-align:right;
+    font-size: .6em;
+}
+
+#proverb {
+    font-family: 'Open Sans';
+    text-align: justify;
+    margin-bottom: 10%;
+    font-size: 1.5em;
+}
+
+#selfie {
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 5%;
+    display: flex;
+}

@@ -1,0 +1,52 @@
+html, body{
+    margin: 0;
+}
+
+#hero-page {
+    margin: 0 10%;
+    height: 100vh;
+}
+
+#single-page {
+    margin: 0 10%;
+    height: 70vh;
+}
+
+#free-space {
+    height:22%;
+}
+
+#hero-image {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#hero-description {
+    text-align: center;
+}
+
+#verticalLine {
+    max-width: 100%;
+    display: block;
+    height: 10vh;
+}
+
+#hero-description {
+    font-family: 'Space Mono';
+}
+
+#hero-icons {
+    display: flex;
+    margin-top: 4%;
+    justify-content: center;
+}
+
+#resamvi {
+    padding-left: 1%;
+    font-family: 'Cinzel';
+}
+
+#singlepage {
+    margin-left:5%;
+}

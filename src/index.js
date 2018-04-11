@@ -21,12 +21,11 @@ var entries = [
   'erster'
 ];
 
-var infScroll = new InfiniteScroll('#blog-entries', {
+var infScroll = new InfiniteScroll('#main-blog', {
   path: function () {
     return entries[this.loadCount] + '.html';
   },
   append: '.container-fluid',
   status: '.scroller-status',
-  scrollThreshold: 1,
-  debug: true
+  scrollThreshold: 1
 });

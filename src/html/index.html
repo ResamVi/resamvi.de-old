@@ -1,71 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>ResamVi | Code, Edit, Bake</title>
-
-  <!-- Meta Tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=0.8">
-  <meta charset="utf-8" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-
-</head>
+  <head>
+    <title>ResamVi | Run, Record, Code.</title>
+  
+    <meta name="keywords" content="resamvi, resamvi.de, julien, midedji, blog, technologie, laufen, backen, video-editing">
+    <meta name="description" content="ResamVi: Ein Blog von Julien Midedji">
+    <meta name="referrer" content="same-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+  
+    <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
+  </head>
 
 <body>
 
-  <section class="jumbotron blog-start">
-    <div class="container">
+  <!-- HERO PAGE -->
+  <div id="hero-page">
 
-      <div class="row" id="header">
-        <div class="col-md-3 col-md-offset-3">
-          <a href="index.html">
-            <img src="img/logo.png" class="img-responsive logo">
-          </a>
-        </div>
-        <img src="img/vline.png" class="img-responsive">
-        <div class="col-md-6">
-          <h1 class="title">ResamVi</h1>
-        </div>
-      </div>
+    <div id="free-space"></div>
 
-      <div class="row" id="description" style="font-family: 'Space Mono';">
-        Hey, ich bin Julien.
-        <br />Informatikstudent.
-      </div>
-
-      <div class="row" id="iconRow">
-        <div class="col-md-8 col-md-offset-2 text-center">
-          <a href="https://github.com/ResamVi" class="icons">
-            <img src="img/github48.png" alt="github">
-          </a>
-
-          <a href="https://www.hackerrank.com/ResamVi" class="icons">
-            <img src="img/HackerRank_logo.png" alt="hackerrank">
-          </a>
-          <a href="https://www.youtube.com/channel/UCXUsCsOauNNuUwFLjYeyTPA" class="icons">
-            <img src="img/youtube48.png" alt="youtube">
-          </a>
-        </div>
-      </div>
-
+    <div id="hero-image">
+      <img src="img/logo.png" class="responsive">
+      <img src="img/verticalLine.png" id="verticalLine">
+      <span id="resamvi">ResamVi</span>
     </div>
-  </section>
 
-  <hr class="separate" style="padding:0px;margin:auto;">
+    <div id="hero-description">
+      <div>Hey, ich bin Julien.
+        <br>Informatikstudent.</div>
+    </div>
+
+    <div id="hero-icons">
+      <a href="https://github.com/ResamVi">
+        <img src="img/github.png" class="icon">
+      </a>
+      <a href="https://www.hackerrank.com/ResamVi" class="spacing">
+        <img src="img/hackerrank.png" class="icon">
+      </a>
+      <a href="https://www.youtube.com/user/ResamVi">
+        <img src="img/youtube.png" class="icon">
+      </a>
+    </div>
+  </div>
+
+  <!--<hr class="separate" style="padding:0px;margin:auto;">
   <div class="sandwich btn-lg">
     <span class="glyphicon glyphicon-menu-hamburger"></span>
   </div>
@@ -88,9 +67,9 @@
         </div>
       </div>
     </div>
-  </form>
+  </form>-->
 
-  <section class="row" id="blog-entries" style="margin-top:5%; margin-bottom:5%;">
+  <section id="main-blog">
     <!-- Entries displayed here -->
   </section>
 

@@ -1,0 +1,16 @@
+.entry-date {
+    font-family: 'Cinzel';
+    color: #696969;
+    margin: 0;
+}
+
+.entry-title {
+    margin-top:0px;
+    border-bottom: 1px solid #333;
+}
+
+.entry-content {
+    font-family: 'Open Sans';
+    margin-bottom: 10%;
+    font-size: 1.5em;
+}
