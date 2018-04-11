@@ -30,9 +30,3 @@ var infScroll = new InfiniteScroll('#blog-entries', {
   scrollThreshold: 1,
   debug: true
 });
-
-console.log(infScroll);
-
-infScroll.on('load', function (response) {
-  console.log('HEllo');
-});
