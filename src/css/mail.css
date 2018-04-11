@@ -34,10 +34,15 @@ input[type=submit] {
 
 .footer {
     border-radius: 5px;
+<<<<<<< HEAD
     background-color: #fcfcfc;
     padding: 20px;
     width: 60%;
     margin-left: 20%;
+=======
+    background-color: #f2f2f2;
+    padding: 20px;
+>>>>>>> 98d695ca58a3160cbb943ac1c0ad8416305b02e5
 }
 
 /* Floating column for labels: 25% width */

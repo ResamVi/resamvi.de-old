@@ -1,3 +1,10 @@
+<!--
+TODO: Softwareentwickler vs. Programmiere vs. Softwareingenieur
+TODO: Strong/static typed language vs weakly typed language
+TODO: Declare vs Define vs Initialize vs Assign
+
+-->
+
 <!DOCTYPE html>
 <html>
 
@@ -11,37 +18,25 @@
     <meta charset="utf-8" />
   
     <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
-    <link href="style.css" rel="stylesheet">
-    <script type="text/javascript" src="script.js"></script>
   </head>
 
 <body>
-  
-  <!-- HERO PAGE -->
-  <div id="single-page">
-
-    <div id="free-space"></div>
-
-    <div id="hero-image">
-      <img src="img/logo.png" class="responsive">
-      <img src="img/verticalLine.png" id="verticalLine">
-      <div id="singlepage">
-        <span id="resamvi">ResamVi</span><br>
-        <div id="hero-description">Hey, Julien hier.</div>
+  <section class="jumbotron">
+    <div class="row" id="header">
+      <div class="col-md-3 col-md-offset-3"><a href="index.html"><img src="img/logo.png" class="img-responsive logo"></a></div>
+      <img src="img/vline.png" class="img-responsive">
+      <div class="col-md-3">
+        <div class="title text-center">ResamVi</div>
+        <div class="notice text-center">Hey, Julien hier.</div>
       </div>
-    </div>        
-  </div>
+    </div>
+  </section>
 
-  <!-- Body -->
-  <div id="main-blog">
-    <section id="copied-content">
-      <span class="entry-date">13. Oktober 2017</span>
-      <h1 class="entry-title">SPAYLE - Alpha Release</h1>
-<<<<<<< HEAD
+  <section class="container-fluid" id="spayle">
+    <div class="row" id="blog-entries">
+      <h4 class="entry-date"> 13. Oktober 2017 </h4>
+      <h2 class="entry-title"> SPAYLE - Alpha Release</h2>
       <div class="entry-content">
-=======
-      <div class="entry-content" v-html="entry.Text">
->>>>>>> 98d695ca58a3160cbb943ac1c0ad8416305b02e5
         
         <div align="center">
           <p>Der Alpha-Release von meinem Game:</p>
@@ -64,7 +59,7 @@
 
         <h2>Play now</h2>
 
-        The latest release is available <a href="game/spayle.html">here</a>
+        The latest release is available <a href="https://resamvi.de/game/spayle">here</a>
 
         <h2>Download</h2>
 
@@ -150,52 +145,23 @@
           
           <li>Letzendlich ist das Schwierigste, dass ich nur mit Objektorientierter Programmierung vertraut bin. Während Javascript mit JS6 den syntaktischen Zucker anbietet Klassen zu machen, versuche ich es trotzdem erstmal mittels Modulen, Prototypisierungen und Konstruktoren. Aber erst gestern musste ich einsehen, dass langsam der Code Spaghetti wird. <i>Zeit für mehr refactoring...</i></li>
         </ol>
-
-      </div>
-      
-      <div class="footer">
         
-<<<<<<< HEAD
-        <h4>Schreib dem Autor 'ne Mail</h4>
-
-        <form action="action_page.php" style="width:100%;">
-=======
-        <h2>Schreib dem Autor 'ne Mail</h2>
-
-        <form action="action_page.php" style="width:80%;">
->>>>>>> 98d695ca58a3160cbb943ac1c0ad8416305b02e5
-            <div class="row">
-              <div class="col-25">
-                <label for="fname">From</label>
-              </div>
-              <div class="col-75">
-                <input type="text" name="firstname" value="anonymous@resamvi.de">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="lname">Subject</label>
-              </div>
-              <div class="col-75">
-                Re: Spayle - ALPHA Release
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="subject">Text</label>
-              </div>
-              <div class="col-75">
-                <textarea id="subject" name="subject" style="height:200px"></textarea>
-              </div>
-            </div>
-            <div class="row">
-              <input type="submit" value="Submit">
-            </div>
-          </form>
-
       </div>
-    
-    </section>
-  </div>
+    </div>
+
+    <div class="row" id="footer">
+      <a href="gaestebuch.php">
+        <div class="col-md-3 text-center" id="button" title="Zum Gästebuch">
+          <img src="img/book.jpg" alt="door">
+        </div>
+      </a>
+      <a href="impressum.html">
+        <div class="col-md-3 col-md-offset-6 text-center" id="button" title="Zurück zur Homepage">
+          <img src="img/door.jpg" alt="door">
+        </div>
+      </a>
+    </div>
+  </section>
 </body>
+
 </html>
