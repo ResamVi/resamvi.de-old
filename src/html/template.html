@@ -2,7 +2,7 @@
 <html>
 
   <head>
-      <title>ResamVi | Run, Record, Code.</title>
+      <title>ResamVi | {{ .Title }}</title>
     
       <meta name="keywords" content="resamvi, resamvi.de, julien, midedji, blog, technologie, laufen, backen, video-editing">
       <meta name="description" content="ResamVi: Ein Blog von Julien Midedji">
@@ -37,8 +37,7 @@
     <section id="copied-content">
       <span class="entry-date">{{ .Date }}</span>
       <h1 class="entry-title">{{ .Title }}</h1>
-      <div class="entry-content" v-html="entry.Text">
-        {{ .Text }}
+      <div class="entry-content">        
       </div>
       
       <div class="footer">

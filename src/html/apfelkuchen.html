@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>ResamVi | Run, Record, Code.</title>
-  
-    <meta name="keywords" content="resamvi, resamvi.de, julien, midedji, blog, technologie, laufen, backen, video-editing">
-    <meta name="description" content="ResamVi: Ein Blog von Julien Midedji">
-    <meta name="referrer" content="same-origin">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8" />
-  
-    <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
-  </head>
+<head>
+  <title>ResamVi | Apfelstreuselkuchen</title>
+
+  <meta name="keywords" content="resamvi, resamvi.de, julien, midedji, blog, technologie, laufen, backen, video-editing">
+  <meta name="description" content="ResamVi: Ein Blog von Julien Midedji">
+  <meta name="referrer" content="same-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+
+  <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
+  <link href="style.css" rel="stylesheet">
+  <script type="text/javascript" src="script.js"></script>
+</head>
 
 <body>
-  <section class="jumbotron">
-    <div class="row" id="header">
-      <div class="col-md-3 col-md-offset-3"><a href="index.html"><img src="img/logo.png" class="img-responsive logo"></a></div>
-      <img src="img/vline.png" class="img-responsive">
-      <div class="col-md-6">
-        <div class="title text-center">ResamVi</div>
-        <div class="notice text-center">Hey, Julien hier.</div>
+
+  <!-- HERO PAGE -->
+  <div id="single-page">
+
+    <div id="free-space"></div>
+
+    <div id="hero-image">
+      <img src="img/logo.png" class="responsive">
+      <img src="img/verticalLine.png" id="verticalLine">
+      <div id="singlepage">
+        <span id="resamvi">ResamVi</span>
+        <br>
+        <div id="hero-description">Hey,
+          <a href="impressum.html">Julien</a> hier.</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="container-fluid" id="apfelkuchen">
-    <div class="row" id="blog-entries">
-      <h4 class="entry-date"> 23. Juni 2017 </h4>
-      <h2 class="entry-title"> Apfelstreuselkuchen</h2>
-      <div class="entry-content">
+  <!-- Body -->
+  <div id="main-blog">
+    <section id="copied-content">
+      <span class="entry-date">23. Juni 2017</span>
+      <h1 class="entry-title">Apfelstreuselkuchen</h1>
+      <div class="entry-content" v-html="entry.Text">
         <h2>Zutaten</h2>
         <h3>Teig</h3>
         <ul>
@@ -60,7 +70,8 @@
           <li>2/3 der Kugel werden für den Boden benutzt, die restlichen 1/3 abreißen für die Streusel später.</li>
           <li>Die 2/3 Kugel als Boden in die Springform kneten. Einen Rand (~2-3cm) formen.</li>
           <li>Ofen vorheizen (180°C Ober- und Unterhitze).</li>
-          <li>Äpfel schälen. Dabei zuerst die Äpfel in Viertel schneiden, Kerngehäuse des Apfels wegschneiden, dann in Scheiben schneiden.</li>
+          <li>Äpfel schälen. Dabei zuerst die Äpfel in Viertel schneiden, Kerngehäuse des Apfels wegschneiden, dann in Scheiben
+            schneiden.</li>
           <li>Zu den geschälten Äpfel Vanillezucker, Zucker, Zimt und dem Saft der Zitrone hinzugeben. Per Hand durchrühren.</li>
           <li>Die vorbereiteten Äpfelscheiben als Füllung in die Springform geben.</li>
           <li>Den restlichen Teig darüber streuseln.</li>
@@ -70,21 +81,45 @@
         <h2 class="text-center">Ergebnis</h2>
         <img src="img/apfelkuchen.jpg" alt="apfelkuchen" class="img-responsive center">
       </div>
-    </div>
 
-    <div class="row" id="footer">
-      <a href="gaestebuch.php">
-        <div class="col-md-3 text-center" id="button" title="Zum Gästebuch">
-          <img src="img/book.jpg" alt="door">
-        </div>
-      </a>
-      <a href="impressum.html">
-        <div class="col-md-3 col-md-offset-6 text-center" id="button" title="Zurück zur Homepage">
-          <img src="img/door.jpg" alt="door">
-        </div>
-      </a>
-    </div>
-  </section>
+      <div class="footer">
+
+        <h2>Schreib dem Autor 'ne Mail</h2>
+
+        <form action="action_page.php" style="width:80%;">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">From</label>
+            </div>
+            <div class="col-75">
+              <input type="text" name="firstname" value="anonymous@resamvi.de">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Subject</label>
+            </div>
+            <div class="col-75">
+              Re: Apfelstreuselkuchen
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Text</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+
+      </div>
+
+    </section>
+  </div>
 </body>
 
 </html>

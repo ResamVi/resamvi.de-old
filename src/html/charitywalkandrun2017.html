@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>ResamVi | Run, Record, Code.</title>
-  
-    <meta name="keywords" content="resamvi, resamvi.de, julien, midedji, blog, technologie, laufen, backen, video-editing">
-    <meta name="description" content="ResamVi: Ein Blog von Julien Midedji">
-    <meta name="referrer" content="same-origin">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8" />
-  
-    <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
-  </head>
+<head>
+  <title>ResamVi | Charity Walk & Run</title>
 
+  <meta name="keywords" content="resamvi, resamvi.de, julien, midedji, blog, technologie, laufen, backen, video-editing">
+  <meta name="description" content="ResamVi: Ein Blog von Julien Midedji">
+  <meta name="referrer" content="same-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+
+  <link rel="icon" href="img/favicon.ico" type="image/gif" size="48x48">
+  <link href="style.css" rel="stylesheet">
+  <script type="text/javascript" src="script.js"></script>
+</head>
 
 <body>
-  <section class="jumbotron">
-    <div class="row" id="header">
-      <div class="col-md-3 col-md-offset-3"><a href="index.html"><img src="img/logo.png" class="img-responsive logo"></a></div>
-      <img src="img/vline.png" class="img-responsive">
-      <div class="col-md-6">
-        <div class="title text-center">ResamVi</div>
-        <div class="notice text-center">Hey, Julien hier.</div>
+
+  <!-- HERO PAGE -->
+  <div id="single-page">
+
+    <div id="free-space"></div>
+
+    <div id="hero-image">
+      <img src="img/logo.png" class="responsive">
+      <img src="img/verticalLine.png" id="verticalLine">
+      <div id="singlepage">
+        <span id="resamvi">ResamVi</span>
+        <br>
+        <div id="hero-description">Hey,
+          <a href="impressum.html">Julien</a> hier.</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="container-fluid" id="charitywalkandrun2017">
-    <div class="row" id="blog-entries">
-      <h4 class="entry-date"> 25. Mai, 2017 </h4>
-      <h2 class="entry-title"> Charity Walk & Run</h2>
-      <div class="entry-content">
+  <!-- Body -->
+  <div id="main-blog">
+    <section id="copied-content">
+      <span class="entry-date">25. Mai, 2017</span>
+      <h1 class="entry-title">Charity Walk & Run</h1>
+      <div class="entry-content" v-html="entry.Text">
 
         <h2>Renninformationen</h2>
-        <img src="img/runlogo.png" alt="logo" class="img-responsive" width="50%"><br>
-        <strong>Wo:</strong> Karlsruhe<br>
-        <strong>Wie weit:</strong> 10 km <br>
-        <strong>Webseite:</strong><a href="https://www.charity-walk.info/staedte/karlsruhe/" style="text-align: left;">https://www.charity-walk.info/staedte/karlsruhe/</a>
-        <img src="img/strecke.jpg" alt="strecke" class="img-responsive"><br>
+        <img src="img/runlogo.png" alt="logo" class="img-responsive" width="50%">
+        <br>
+        <strong>Wo:</strong> Karlsruhe
+        <br>
+        <strong>Wie weit:</strong> 10 km
+        <br>
+        <strong>Webseite:</strong>
+        <a href="https://www.charity-walk.info/staedte/karlsruhe/" style="text-align: left;">https://www.charity-walk.info/staedte/karlsruhe/</a>
+        <img src="img/strecke.jpg" alt="strecke" class="img-responsive">
+        <br>
 
         <h2>Ziele</h2>
         <ul>
@@ -104,49 +118,88 @@
         </table>
 
         <h2>Bilder</h2>
-        <img src="img/anfang.jpg" alt="anfang" class="img-responsive"><br>
-        <img src="img/nummer.jpg" alt="nummer" class="img-responsive"><br>
+        <img src="img/anfang.jpg" alt="anfang" class="img-responsive">
+        <br>
+        <img src="img/nummer.jpg" alt="nummer" class="img-responsive">
+        <br>
         <img src="img/ende.jpg" alt="ende" class="img-responsive">
 
         <h2>Training</h2>
-        <p>Eine Woche vor Startschuss krieg ich diese E-Mail: "Am 21.05. um 12Uhr Laufen. Begenen. Helfen". Der Inhalt zusammengefasst: <br>"Vielen Dank, dass sie letztes mal teilgenommen haben. Oh, by the way: Nächste Woche ist das Rennen für dieses Jahr". <br>Oh wow.</p>
-        <p>Also alles Training was ich bis dato geleistet habe bestand aus Basistraining und 1-2 verteilte Qualitätsläufe in einigen Wochen. Ich sah dieses Rennen als Vorbereitung zu meinem eigentlichen Ziel an - dem Rheinuferlauf in 2 Monaten. Das bietet mir die Möglichkeit an meinem Vorbereitungsrituatl für ein Rennen zu feilen und auch etwas mit dem Essen und Warm-Up vor dem Rennen zu experimentieren.</p>
+        <p>Eine Woche vor Startschuss krieg ich diese E-Mail: "Am 21.05. um 12Uhr Laufen. Begenen. Helfen". Der Inhalt zusammengefasst:
+          <br>"Vielen Dank, dass sie letztes mal teilgenommen haben. Oh, by the way: Nächste Woche ist das Rennen für dieses
+          Jahr".
+          <br>Oh wow.</p>
+        <p>Also alles Training was ich bis dato geleistet habe bestand aus Basistraining und 1-2 verteilte Qualitätsläufe in
+          einigen Wochen. Ich sah dieses Rennen als Vorbereitung zu meinem eigentlichen Ziel an - dem Rheinuferlauf in 2
+          Monaten. Das bietet mir die Möglichkeit an meinem Vorbereitungsrituatl für ein Rennen zu feilen und auch etwas
+          mit dem Essen und Warm-Up vor dem Rennen zu experimentieren.</p>
 
 
         <h2>Vor dem Rennen</h2>
-        <p>Dinge die ich bisher gelernt habe: Man kann nie früh genug da sein. Man kann nie früh genug zur Toilette gehen.<br> Dinge die ich lernen musste: Man KANN sich zu früh aufwärmen. Nämlich 5km-zu-lang.
-          <img src="img/warmup.png" alt="warmup" class="img-responsive"></p>
+        <p>Dinge die ich bisher gelernt habe: Man kann nie früh genug da sein. Man kann nie früh genug zur Toilette gehen.
+          <br> Dinge die ich lernen musste: Man KANN sich zu früh aufwärmen. Nämlich 5km-zu-lang.
+          <img src="img/warmup.png" alt="warmup" class="img-responsive">
+        </p>
 
         <h2>Im Rennen</h2>
 
-        <p><strong>1. Kilometer:</strong> Mit dem Startschuss ging das Gedrängle los. 10km Läufer, 5km Läufer und 5km Walker alle gleichzeitig. 150 Teilnehmer. Noch so beiläufig wurde uns erwähnt, dass das Ausgangstor aus dem Park nicht geöffnet werden konnte. Also wer hinter den Walkern raus wollte hat einbußen müssen. Das hab ich mir nicht erlauben lassen.</p>
+        <p>
+          <strong>1. Kilometer:</strong> Mit dem Startschuss ging das Gedrängle los. 10km Läufer, 5km Läufer und 5km Walker alle
+          gleichzeitig. 150 Teilnehmer. Noch so beiläufig wurde uns erwähnt, dass das Ausgangstor aus dem Park nicht geöffnet
+          werden konnte. Also wer hinter den Walkern raus wollte hat einbußen müssen. Das hab ich mir nicht erlauben lassen.</p>
 
-        <p><strong>2. Kilometer:</strong> Die Strecke war nun gerade, das Gedrängle hat aufgehört. Komplett. Vorne war nur noch Sicht auf 10-20 und nach hinten wollte ich garnicht mehr blicken.</p>
+        <p>
+          <strong>2. Kilometer:</strong> Die Strecke war nun gerade, das Gedrängle hat aufgehört. Komplett. Vorne war nur noch Sicht
+          auf 10-20 und nach hinten wollte ich garnicht mehr blicken.</p>
 
-        <p><strong>3. Kilometer:</strong> Bei der Kurve in den Wald fing die Katastrophe an: Seitenstechen. Aber von der Art wie ich sie nur 1-2 Mal im Training erleben musste. Da hat auch der einfache Trick mit der Atmung auf dem anderen Bein nicht mehr geholfen hilft. Komplett crash</p>
+        <p>
+          <strong>3. Kilometer:</strong> Bei der Kurve in den Wald fing die Katastrophe an: Seitenstechen. Aber von der Art wie ich
+          sie nur 1-2 Mal im Training erleben musste. Da hat auch der einfache Trick mit der Atmung auf dem anderen Bein
+          nicht mehr geholfen hilft. Komplett crash</p>
 
-        <img src="img/crash.png" alt="crash" class="img-responsive"><br>
+        <img src="img/crash.png" alt="crash" class="img-responsive">
+        <br>
 
-        <p><strong>3. Kilometer:</strong> Bei der Kurve in den Wald fing die Katastrophe an: Seitenstechen. Aber von der Art wie ich sie nur 1-2 Mal im Training erleben musste. Da hat auch der einfache Trick mit der Atmung auf dem anderen Bein nicht mehr geholfen hilft. Komplett crash</p>
+        <p>
+          <strong>3. Kilometer:</strong> Bei der Kurve in den Wald fing die Katastrophe an: Seitenstechen. Aber von der Art wie ich
+          sie nur 1-2 Mal im Training erleben musste. Da hat auch der einfache Trick mit der Atmung auf dem anderen Bein
+          nicht mehr geholfen hilft. Komplett crash</p>
 
-        <p><strong>4. Kilometer:</strong> Nach dem ich mir verzweifelt ansehen musste wie mich alles überholt, sind die Seitenstechen wieder weg. Ab hier ging dann das lustige Überholspiel los.</p>
+        <p>
+          <strong>4. Kilometer:</strong> Nach dem ich mir verzweifelt ansehen musste wie mich alles überholt, sind die Seitenstechen
+          wieder weg. Ab hier ging dann das lustige Überholspiel los.</p>
 
-        <p><strong>5. Kilometer:</strong> Die 10km-Läufer sind einen Umweg gelaufen und jetzt treffen die Strecke für 10km und 5km wieder aufeinander bis sie sich kurz danach wieder trennen. Jetzt hat man auch gesehen gegen wen man denn jetzt wirklich läuft.</p>
+        <p>
+          <strong>5. Kilometer:</strong> Die 10km-Läufer sind einen Umweg gelaufen und jetzt treffen die Strecke für 10km und 5km
+          wieder aufeinander bis sie sich kurz danach wieder trennen. Jetzt hat man auch gesehen gegen wen man denn jetzt
+          wirklich läuft.</p>
 
-        <p><strong>6. Kilometer:</strong> Kurz vorher war eine Trinkstation, die echt beschissen gesetzt wurde. Man musste nach links abbiegen aber die Station haben sie einfach an den rechten Rand gestellt. Das und ich hab mich verschluckt. Hust</p>
+        <p>
+          <strong>6. Kilometer:</strong> Kurz vorher war eine Trinkstation, die echt beschissen gesetzt wurde. Man musste nach links
+          abbiegen aber die Station haben sie einfach an den rechten Rand gestellt. Das und ich hab mich verschluckt. Hust</p>
 
-        <p><strong>7. Kilometer:</strong> "Oh wow schon 7km. Ist ja fast schon zu Ende". Routine schlägt ein.</p>
+        <p>
+          <strong>7. Kilometer:</strong> "Oh wow schon 7km. Ist ja fast schon zu Ende". Routine schlägt ein.</p>
 
-        <p><strong>8. Kilometer:</strong> Ab hier machten sich meine schwachen Muskeln im Ober- und Unterkörper. "Ich muss mal das Core-Training anfangen", ging mir durch den Kopf.</p>
+        <p>
+          <strong>8. Kilometer:</strong> Ab hier machten sich meine schwachen Muskeln im Ober- und Unterkörper. "Ich muss mal das
+          Core-Training anfangen", ging mir durch den Kopf.</p>
 
-        <p><strong>9. Kilometer:</strong> Ab jetzt war ich froh wenn's vorbei war. Dieses Rennen war ab jetzt schon ein Eye-Opener. Hier muss definitiv noch gefeilt werden.</p>
+        <p>
+          <strong>9. Kilometer:</strong> Ab jetzt war ich froh wenn's vorbei war. Dieses Rennen war ab jetzt schon ein Eye-Opener.
+          Hier muss definitiv noch gefeilt werden.</p>
 
-        <p><strong>10. Kilometer:</strong> Nochmal der letzte Kick und Game Over. Wenigstens war mir nicht kotzübel aber das sagt ja schon aus, dass da noch mehr hätte gehen können.</p>
+        <p>
+          <strong>10. Kilometer:</strong> Nochmal der letzte Kick und Game Over. Wenigstens war mir nicht kotzübel aber das sagt
+          ja schon aus, dass da noch mehr hätte gehen können.</p>
 
-        <img src="img/graph.png" alt="anfang" class="img-responsive"><br>
+        <img src="img/graph.png" alt="anfang" class="img-responsive">
+        <br>
 
         <h2>Nach dem Rennen</h2>
-        <p>Großes Danke an die Organisation und dem Veranstalter Ahmadiyya Muslim Jamaat. Dass das an einen guten Zweck ging, nämlich zugunsten des Förderverein zur Unterstützung der onkologischen Abteilung der Kinderklinik Karlsruhe e.V. und Humanity First e.V. war ein zusätzlicher Bonus.</p>
+        <p>Großes Danke an die Organisation und dem Veranstalter Ahmadiyya Muslim Jamaat. Dass das an einen guten Zweck ging,
+          nämlich zugunsten des Förderverein zur Unterstützung der onkologischen Abteilung der Kinderklinik Karlsruhe e.V.
+          und Humanity First e.V. war ein zusätzlicher Bonus.</p>
         <p>Das war auch der einzige Trost am Rennen. Keins meiner Ziele konnte ich erfüllen. Endleistungen:</p>
 
         <h2>Gesamtplatzierung: 45. von 149</h2>
@@ -154,21 +207,47 @@
         <h2>Gesamtzeit: 0:50:14,8</h2>
 
         <br>
+
       </div>
-    </div>
-    <div class="row" id="footer">
-      <a href="gaestebuch.php">
-        <div class="col-md-3 text-center" id="button" title="Zum Gästebuch">
-          <img src="img/book.jpg" alt="door">
-        </div>
-      </a>
-      <a href="impressum.html">
-        <div class="col-md-3 col-md-offset-6 text-center" id="button" title="Zurück zur Homepage">
-          <img src="img/door.jpg" alt="door">
-        </div>
-      </a>
-    </div>
-  </section>
+
+      <div class="footer">
+
+        <h2>Schreib dem Autor 'ne Mail</h2>
+
+        <form action="action_page.php" style="width:80%;">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">From</label>
+            </div>
+            <div class="col-75">
+              <input type="text" name="firstname" value="anonymous@resamvi.de">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Subject</label>
+            </div>
+            <div class="col-75">
+              Re: Charity Walk & Run
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Text</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+
+      </div>
+
+    </section>
+  </div>
 </body>
 
 </html>
