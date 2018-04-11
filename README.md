@@ -1,3 +1,11 @@
+## Install
+
+`npm install`
+
+`npm run build`
+
+
+
 ## Notes to keep in mind
 Any references to any other source files (e.g. `<style src="style.css">`) do not follow the structure as is presented in `src/` folder. These are side-effects of trying to use webpack as task runner.
 
