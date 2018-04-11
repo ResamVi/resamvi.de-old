@@ -25,7 +25,7 @@ var infScroll = new InfiniteScroll('#main-blog', {
   path: function () {
     return entries[this.loadCount] + '.html';
   },
-  append: '.container-fluid',
+  append: '#copied-content',
   status: '.scroller-status',
   scrollThreshold: 1
 });

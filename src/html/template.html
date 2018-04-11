@@ -1,10 +1,3 @@
-<!--
-TODO: Softwareentwickler vs. Programmiere vs. Softwareingenieur
-TODO: Strong/static typed language vs weakly typed language
-TODO: Declare vs Define vs Initialize vs Assign
-
--->
-
 <!DOCTYPE html>
 <html>
 
@@ -21,39 +14,44 @@ TODO: Declare vs Define vs Initialize vs Assign
   </head>
 
 <body>
-  <section class="jumbotron">
-    <div class="row" id="header">
-      <div class="col-md-3 col-md-offset-3"><a href="index.html"><img src="img/logo.png" class="img-responsive logo"></a></div>
-      <img src="img/vline.png" class="img-responsive">
-      <div class="col-md-3">
-        <div class="title text-center">ResamVi</div>
-        <div class="notice text-center">Hey, Julien hier.</div>
-      </div>
-    </div>
-  </section>
+  
+  <!-- HERO PAGE -->
+  <div id="single-page">
 
-  <section class="container-fluid" id="">
-    <div class="row" id="blog-entries">
-      <h4 class="entry-date"> Datum </h4>
-      <h2 class="entry-title"> Titel</h2>
-      <div class="entry-content">
-        Inhalt
-      </div>
-    </div>
+    <div id="free-space"></div>
 
-    <div class="row" id="footer">
-      <a href="gaestebuch.php">
-        <div class="col-md-3 text-center" id="button" title="Zum Gästebuch">
-          <img src="img/book.jpg" alt="door">
-        </div>
-      </a>
-      <a href="impressum.html">
-        <div class="col-md-3 col-md-offset-6 text-center" id="button" title="Zurück zur Homepage">
-          <img src="img/door.jpg" alt="door">
-        </div>
-      </a>
-    </div>
-  </section>
+    <div id="hero-image">
+      <img src="img/logo.png" class="responsive">
+      <img src="img/verticalLine.png" id="verticalLine">
+      <div id="singlepage">
+        <span id="resamvi">ResamVi</span><br>
+        <div id="hero-description">Hey, <a href="impressum.html">Julien</a> hier.</div>
+      </div>
+    </div>        
+  </div>
+
+  <!-- Body -->
+  <div id="main-blog">
+    <section id="copied-content">
+      <span class="entry-date">{{ .Date }}</span>
+      <h1 class="entry-title">{{ .Title }}</h1>
+      <div class="entry-content" v-html="entry.Text">
+        {{ .Text }}
+      </div>
+      <div class="footer">
+        <a href="gaestebuch.html" id="button">
+          <div title="Zum Gästebuch">
+            <img src="img/book.jpg" alt="door">
+          </div>
+        </a>
+        <a href="impressum.html" id="button">
+          <div title="Zurück zur Homepage">
+            <img src="img/door.jpg" alt="door">
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
 </body>
 
 </html>
