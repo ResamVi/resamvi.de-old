@@ -4,9 +4,8 @@
   "description": "a website including the shit julien does",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -33,7 +32,8 @@
     "image-webpack-loader": "^3.6.0",
     "infinite-scroll": "^3.0.3",
     "style-loader": "^0.20.3",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13"
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   }
 }
