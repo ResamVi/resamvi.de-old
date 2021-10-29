@@ -15,3 +15,5 @@ Refer to `webpack.config.js` to see more details of the finished structure in `b
 - Any javascript that needs to be run can be imported via `<style src="script.js">`
 - In the same man any style declarations are bundled in `style.css` and available in root of `build/` as well 
 - images in `img/` (no subfolders)
+
+Gimme those jimmies
